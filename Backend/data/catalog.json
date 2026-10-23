@@ -1,0 +1,4284 @@
+{
+ "statusSets": {
+  "learning": {
+   "options": [
+    "Not Started",
+    "Pending",
+    "Revision",
+    "Done"
+   ],
+   "initial": "Not Started",
+   "done": "Done",
+   "checkable": true,
+   "tones": {
+    "Not Started": "idle",
+    "Pending": "progress",
+    "Revision": "review",
+    "Done": "done"
+   }
+  },
+  "project": {
+   "options": [
+    "Not started",
+    "In progress",
+    "Needs revision",
+    "Done"
+   ],
+   "initial": "Not started",
+   "done": "Done",
+   "checkable": true,
+   "tones": {
+    "Not started": "idle",
+    "In progress": "progress",
+    "Needs revision": "review",
+    "Done": "done"
+   }
+  },
+  "application": {
+   "options": [
+    "Not started",
+    "To research",
+    "Ready to apply",
+    "Applied",
+    "Assessment",
+    "Interview",
+    "Offer",
+    "Rejected",
+    "On hold"
+   ],
+   "initial": "Not started",
+   "done": "Offer",
+   "checkable": false,
+   "tones": {
+    "Not started": "idle",
+    "To research": "idle",
+    "Ready to apply": "info",
+    "Applied": "info",
+    "Assessment": "progress",
+    "Interview": "progress",
+    "Offer": "done",
+    "Rejected": "review",
+    "On hold": "idle"
+   }
+  }
+ },
+ "sheets": [
+  {
+   "key": "swe",
+   "title": "SWE Roadmap",
+   "kind": "roadmap",
+   "group": "learn",
+   "primary": "skill",
+   "secondary": "category",
+   "groupBy": "phase",
+   "filters": [
+    "priority",
+    "category"
+   ],
+   "statusSet": "learning",
+   "subtitle": "Software Engineering / SDE track: strengthen coding and CS fundamentals, then ship reliable software.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "phase",
+     "label": "Phase",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "category",
+     "label": "Category",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "skill",
+     "label": "Skill / task",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "priority",
+     "label": "Priority",
+     "type": "badge",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "confidence",
+     "label": "Confidence",
+     "type": "confidence",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "learn",
+     "label": "What to learn / deliverable",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "resource",
+     "label": "Resource / next action",
+     "type": "auto",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "swe:java-primary-interview-language",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Interview language",
+      "skill": "Java (primary interview language)",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Syntax, methods, arrays, strings, collections, generics, exceptions and clean code.",
+      "resource": "https://docs.oracle.com/en/java/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:dsa-big-o",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Problem solving",
+      "skill": "DSA + Big-O",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Arrays, strings, hash maps, stacks/queues, linked lists, binary search, recursion, trees, heaps, graphs, greedy, backtracking, DP; explain time/space.",
+      "resource": "https://leetcode.com/problemset/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:oop",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Core CS",
+      "skill": "OOP",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Encapsulation, abstraction, inheritance, polymorphism, interfaces, composition and SOLID basics.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:dbms-sql",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Core CS",
+      "skill": "DBMS + SQL",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Keys, normalization, joins, subqueries, CTEs, window functions, transactions, indexes and query plans.",
+      "resource": "https://leetcode.com/studyplan/top-sql-50/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:operating-systems",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Core CS",
+      "skill": "Operating systems",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Processes/threads, concurrency, deadlocks, memory, virtual memory, scheduling and synchronization.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:computer-networks",
+     "values": {
+      "phase": "1. Foundation",
+      "category": "Core CS",
+      "skill": "Computer networks",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "HTTP/HTTPS, DNS, TCP vs UDP, TLS, cookies, REST and status codes.",
+      "resource": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:html-css-javascript",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Frontend",
+      "skill": "HTML + CSS + JavaScript",
+      "priority": "Must-have",
+      "status": "Done",
+      "confidence": 1,
+      "learn": "Semantic HTML, responsive layouts, DOM, ES6+, promises, async/await, error handling and browser devtools.",
+      "resource": "https://developer.mozilla.org/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:react-typescript",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Frontend",
+      "skill": "React + TypeScript",
+      "priority": "High",
+      "status": "Pending",
+      "confidence": 1,
+      "learn": "Components, props/state, hooks, routing, forms, accessibility, API loading/error states and reusable components.",
+      "resource": "https://react.dev/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:node-js-express-rest-apis",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Backend",
+      "skill": "Node.js + Express REST APIs",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Routing, middleware, validation, pagination, error handling, authentication, authorization and API docs.",
+      "resource": "https://nodejs.org/en/learn",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:java-backend-spring-boot",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Backend",
+      "skill": "Java backend (Spring Boot)",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Controllers, services, repositories, DTOs, validation, dependency injection, JPA and security basics.",
+      "resource": "https://spring.io/guides",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:postgresql-mongodb",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Data",
+      "skill": "PostgreSQL + MongoDB",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Schema design, relationships, indexes, migrations, aggregation, pagination and transactions.",
+      "resource": "https://www.postgresql.org/docs/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:git-github",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Engineering",
+      "skill": "Git + GitHub",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Branching, clean commits, pull requests, resolving conflicts, issues, README and meaningful history.",
+      "resource": "https://git-scm.com/docs",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:testing-debugging",
+     "values": {
+      "phase": "2. Build software",
+      "category": "Quality",
+      "skill": "Testing + debugging",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Unit, integration and API tests; test validation/auth/error paths; logs, breakpoints and reproducible bug reports.",
+      "resource": "https://vitest.dev/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:docker-ci-cd",
+     "values": {
+      "phase": "3. Ship it",
+      "category": "Deployment",
+      "skill": "Docker + CI/CD",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Dockerfile, env vars, build/test pipeline, health checks, secrets, logs and rollback basics.",
+      "resource": "https://docs.docker.com/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:system-design-fundamentals",
+     "values": {
+      "phase": "3. Ship it",
+      "category": "Design",
+      "skill": "System design fundamentals",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Caching, queues, load balancing, rate limits, database trade-offs, reliability and observability.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:swasthya-setu-engineering-polish",
+     "values": {
+      "phase": "3. Ship it",
+      "category": "Portfolio",
+      "skill": "Swasthya Setu engineering polish",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Document roles, API contracts, DB schema, security, error states, tests, seed data, deployment, architecture diagram and demo.",
+      "resource": "Use existing project as main SWE case study.",
+      "notes": ""
+     }
+    },
+    {
+     "id": "swe:coding-project-storytelling",
+     "values": {
+      "phase": "3. Ship it",
+      "category": "Interview",
+      "skill": "Coding + project storytelling",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Timed DSA practice; explain trade-offs, a bug fixed, a design choice, testing strategy and project impact.",
+      "resource": "",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "aiml",
+   "title": "AI/ML Roadmap",
+   "kind": "roadmap",
+   "group": "learn",
+   "primary": "skill",
+   "secondary": "category",
+   "groupBy": "phase",
+   "filters": [
+    "priority",
+    "category"
+   ],
+   "statusSet": "learning",
+   "subtitle": "AI/ML track: learn data and classical ML first, then choose deep learning or GenAI/RAG based on target roles.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "phase",
+     "label": "Phase",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "category",
+     "label": "Category",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "skill",
+     "label": "Skill / task",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "priority",
+     "label": "Priority",
+     "type": "badge",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "confidence",
+     "label": "Confidence",
+     "type": "confidence",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "learn",
+     "label": "What to learn / deliverable",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "resource",
+     "label": "Resource / next action",
+     "type": "auto",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "aiml:python-for-data-and-ml",
+     "values": {
+      "phase": "1. Foundations",
+      "category": "Python",
+      "skill": "Python for data and ML",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Functions, collections, modules, virtual environments, exceptions, notebooks and reusable code.",
+      "resource": "https://docs.python.org/3/tutorial/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:linear-algebra",
+     "values": {
+      "phase": "1. Foundations",
+      "category": "Math",
+      "skill": "Linear algebra",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Vectors, matrices, dot products, matrix multiplication, norms and embedding intuition.",
+      "resource": "https://www.khanacademy.org/math/linear-algebra",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:probability-statistics",
+     "values": {
+      "phase": "1. Foundations",
+      "category": "Math",
+      "skill": "Probability + statistics",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Distributions, expectation/variance, conditional probability, Bayes, sampling, confidence intervals, hypothesis tests and correlation vs causation.",
+      "resource": "https://www.khanacademy.org/math/statistics-probability",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:numpy-pandas-eda",
+     "values": {
+      "phase": "1. Foundations",
+      "category": "Data",
+      "skill": "NumPy + pandas + EDA",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Array operations, missing data, duplicates, joins, groupby, visualization, outliers and data-leakage awareness.",
+      "resource": "https://pandas.pydata.org/docs/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:sql-for-analytics",
+     "values": {
+      "phase": "1. Foundations",
+      "category": "Data",
+      "skill": "SQL for analytics",
+      "priority": "High",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Joins, aggregation, CTEs, window functions, data-quality checks and basic indexing.",
+      "resource": "https://leetcode.com/studyplan/top-sql-50/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:supervised-learning",
+     "values": {
+      "phase": "2. Machine learning",
+      "category": "Classical ML",
+      "skill": "Supervised learning",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Linear/logistic regression, decision trees, random forests, gradient boosting, kNN and SVM intuition.",
+      "resource": "https://scikit-learn.org/stable/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:unsupervised-learning",
+     "values": {
+      "phase": "2. Machine learning",
+      "category": "Classical ML",
+      "skill": "Unsupervised learning",
+      "priority": "High",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "K-means, hierarchical clustering, PCA, anomaly detection and when to use each.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:preprocessing-feature-engineering",
+     "values": {
+      "phase": "2. Machine learning",
+      "category": "Model quality",
+      "skill": "Preprocessing + feature engineering",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Imputation, encoding, scaling, pipelines, class imbalance, train/validation/test split and leakage prevention.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:evaluation-validation",
+     "values": {
+      "phase": "2. Machine learning",
+      "category": "Model quality",
+      "skill": "Evaluation + validation",
+      "priority": "Must-have",
+      "status": "Revision",
+      "confidence": 1,
+      "learn": "Confusion matrix, precision/recall/F1, ROC-AUC, MAE/RMSE, cross-validation, threshold choice and baseline comparison.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:overfitting-explainability",
+     "values": {
+      "phase": "2. Machine learning",
+      "category": "Model quality",
+      "skill": "Overfitting + explainability",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Bias/variance, regularization, feature importance, calibration, fairness, limitations and data provenance.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:neural-network-fundamentals",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "Deep learning",
+      "skill": "Neural network fundamentals",
+      "priority": "Role-dependent",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tensors, layers, activations, loss, backpropagation intuition, optimizers, batch size and epochs.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:pytorch-choose-first",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "Deep learning",
+      "skill": "PyTorch (choose first)",
+      "priority": "High for DL roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tensors, Dataset/DataLoader, model class, training loop, autograd, checkpoints and inference.",
+      "resource": "https://pytorch.org/tutorials/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:transformers-hugging-face",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "GenAI / NLP",
+      "skill": "Transformers + Hugging Face",
+      "priority": "High for GenAI roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tokenization, attention, embeddings, model/tokenizer loading, inference pipelines and model cards.",
+      "resource": "https://huggingface.co/learn",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:llm-apis-structured-outputs",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "GenAI / RAG",
+      "skill": "LLM APIs + structured outputs",
+      "priority": "High for GenAI roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Secure API-key handling, schema validation, retries, timeouts, streaming, context and token/cost awareness.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:rag-end-to-end",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "GenAI / RAG",
+      "skill": "RAG end-to-end",
+      "priority": "High for GenAI roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Parse documents, chunk with metadata, embed, retrieve top-k, assemble context, generate grounded answers and cite sources.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:vector-search-retrieval-evaluation",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "GenAI / RAG",
+      "skill": "Vector search + retrieval evaluation",
+      "priority": "High for GenAI roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Chroma/FAISS/pgvector, similarity search, metadata filters, hybrid search basics, recall and citation correctness.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:llm-safety-evaluation",
+     "values": {
+      "phase": "3. Specialize",
+      "category": "Responsible AI",
+      "skill": "LLM safety + evaluation",
+      "priority": "Must-have for deployed GenAI",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Golden test set, groundedness/relevance, prompt injection, privacy, untrusted retrieved text, bounded tools and abstention.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:fastapi-model-serving",
+     "values": {
+      "phase": "4. Production",
+      "category": "Serving",
+      "skill": "FastAPI model serving",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Pydantic validation, REST endpoints, inference, error handling, docs, versioning and health checks.",
+      "resource": "https://fastapi.tiangolo.com/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:docker-reproducibility",
+     "values": {
+      "phase": "4. Production",
+      "category": "MLOps",
+      "skill": "Docker + reproducibility",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Environment configuration, reproducible data/model versions, logging, latency monitoring and drift awareness.",
+      "resource": "https://docs.docker.com/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:ml-project-report",
+     "values": {
+      "phase": "4. Production",
+      "category": "Portfolio",
+      "skill": "ML project report",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Document problem, data source, baseline, split strategy, metrics, error analysis, limitations and reproducible steps.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "aiml:deploy-one-usable-ai-feature",
+     "values": {
+      "phase": "4. Production",
+      "category": "Portfolio",
+      "skill": "Deploy one usable AI feature",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Expose inference through an API and integrate into a simple interface; include tests, usage limits and failure states.",
+      "resource": "",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "integration",
+   "title": "AI + SWE Integration",
+   "kind": "roadmap",
+   "group": "learn",
+   "primary": "skill",
+   "secondary": "category",
+   "groupBy": "phase",
+   "filters": [
+    "priority",
+    "category"
+   ],
+   "statusSet": "learning",
+   "subtitle": "Combined development track: use software engineering to build reliable products and AI/ML to add a measured, testable capability.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "phase",
+     "label": "Phase",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "category",
+     "label": "Category",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "skill",
+     "label": "Skill / task",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "priority",
+     "label": "Priority",
+     "type": "badge",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "confidence",
+     "label": "Confidence",
+     "type": "confidence",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "learn",
+     "label": "What to learn / deliverable",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "resource",
+     "label": "Resource / next action",
+     "type": "auto",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "integration:define-one-real-user-problem",
+     "values": {
+      "phase": "1. Pick a problem",
+      "category": "Product thinking",
+      "skill": "Define one real user problem",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Choose a bounded feature (e.g. healthcare resource demand forecast or document Q&A); define users, inputs, outputs and success metric.",
+      "resource": "Try a focused Swasthya Setu feature.",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:react-typescript-interface",
+     "values": {
+      "phase": "2. Build the app",
+      "category": "Frontend",
+      "skill": "React + TypeScript interface",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Responsive form/results UI, loading/empty/error states, accessible controls and API integration.",
+      "resource": "https://react.dev/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:node-js-express-application-api",
+     "values": {
+      "phase": "2. Build the app",
+      "category": "Backend",
+      "skill": "Node.js/Express application API",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Validate requests, enforce auth/roles, store data, rate-limit expensive calls and return consistent errors.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:database-data-pipeline",
+     "values": {
+      "phase": "2. Build the app",
+      "category": "Data layer",
+      "skill": "Database + data pipeline",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Design schema, indexes and migrations; validate/version input data; protect private data.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:baseline-before-complex-model",
+     "values": {
+      "phase": "3. Add AI",
+      "category": "Model choice",
+      "skill": "Baseline before complex model",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Build a simple rule/statistical baseline, define evaluation metrics, compare improvements and record limitations.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:python-scikit-learn-or-llm-api",
+     "values": {
+      "phase": "3. Add AI",
+      "category": "Model/API service",
+      "skill": "Python + scikit-learn or LLM API",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Use a separate FastAPI service for custom models or securely call a hosted LLM API; validate inputs/outputs.",
+      "resource": "https://fastapi.tiangolo.com/",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:grounded-document-assistant",
+     "values": {
+      "phase": "3. Add AI",
+      "category": "RAG option",
+      "skill": "Grounded document assistant",
+      "priority": "Role-dependent",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Ingest documents, chunk, embed, retrieve relevant sections, cite sources and say when evidence is missing.",
+      "resource": "Only if document search solves the problem.",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:versioned-api-contract",
+     "values": {
+      "phase": "4. Integrate",
+      "category": "Service contracts",
+      "skill": "Versioned API contract",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Define request/response schemas, timeouts, retries, error codes, service auth and safe fallbacks.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:latency-cost-and-fallback",
+     "values": {
+      "phase": "4. Integrate",
+      "category": "Reliability",
+      "skill": "Latency, cost and fallback",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Track latency, request failures and AI cost; cache safe results; show fallback when model is unavailable.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:privacy-prompt-input-safety",
+     "values": {
+      "phase": "4. Integrate",
+      "category": "Security",
+      "skill": "Privacy + prompt/input safety",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Keep secrets server-side, limit access, validate model outputs, treat retrieved text as untrusted and minimize sensitive data.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:unit-integration-model-eval",
+     "values": {
+      "phase": "5. Prove it works",
+      "category": "Testing",
+      "skill": "Unit + integration + model eval",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Test frontend/API/service boundaries, malformed input, no-result cases, grounding cases and authorization.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:software-ai-metrics",
+     "values": {
+      "phase": "5. Prove it works",
+      "category": "Evaluation",
+      "skill": "Software + AI metrics",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Measure app correctness/availability and model quality (task metrics, groundedness and human review).",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:docker-ci-cd-monitoring",
+     "values": {
+      "phase": "6. Ship it",
+      "category": "Deployment",
+      "skill": "Docker + CI/CD + monitoring",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Deploy frontend, backend and AI service; configure env vars, health checks, logs, versioning and rollback.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:architecture-demo",
+     "values": {
+      "phase": "6. Ship it",
+      "category": "Documentation",
+      "skill": "Architecture + demo",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Publish architecture/data-flow diagram, API docs, test instructions, limitations, screenshots, demo URL and setup README.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:bed-pressure-follow-up-risk-feature",
+     "values": {
+      "phase": "Portfolio example",
+      "category": "Swasthya Setu",
+      "skill": "Bed-pressure / follow-up risk feature",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Connect a measured prediction service to the backend; label demo predictions and document dataset/model limitations.",
+      "resource": "Do not present it as validated clinical advice.",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:document-q-a-with-citations",
+     "values": {
+      "phase": "Portfolio example",
+      "category": "RAG assistant",
+      "skill": "Document Q&A with citations",
+      "priority": "High",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Upload approved docs, retrieve passages, answer with citations, evaluate grounding and show an abstain state.",
+      "resource": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "integration:explain-end-to-end-trade-offs",
+     "values": {
+      "phase": "Portfolio example",
+      "category": "Interview story",
+      "skill": "Explain end-to-end trade-offs",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Explain model choice, baseline comparison, data design, API boundaries, security, testing and deployment.",
+      "resource": "",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "companies",
+   "title": "Company roles",
+   "kind": "tracker",
+   "group": "jobs",
+   "primary": "company",
+   "secondary": "track",
+   "groupBy": null,
+   "filters": [
+    "track",
+    "priority"
+   ],
+   "statusSet": "application",
+   "subtitle": "Companies hiring for AI/ML and full-stack roles. Verify vacancies and eligibility before applying.",
+   "help": {
+    "title": "What do the priorities mean?",
+    "items": [
+     {
+      "term": "Priority",
+      "text": "Reasonable first-wave targets to investigate."
+     },
+     {
+      "term": "Stretch",
+      "text": "More competitive, or role availability and eligibility may be harder."
+     },
+     {
+      "term": "verify opening",
+      "text": "Check that there is an active vacancy first."
+     }
+    ]
+   },
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "company",
+     "label": "Company",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "track",
+     "label": "Track",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "roles",
+     "label": "Role titles to search",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "priority",
+     "label": "Priority",
+     "type": "badge",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "core",
+     "label": "Core skills required",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "helpful",
+     "label": "Helpful / differentiating skills",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "rounds",
+     "label": "Typical interview rounds (not guaranteed)",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "formats",
+     "label": "Interview types / format",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "prepare",
+     "label": "What to prepare / likely focus",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "eligibility",
+     "label": "Eligibility note",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "link",
+     "label": "Careers page",
+     "type": "link",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "appliedDate",
+     "label": "Applied date",
+     "type": "date",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "nextAction",
+     "label": "Next action",
+     "type": "input",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "companies:microsoft-ai-engineer-intern-applied-scientist-intern-software-enginee",
+     "values": {
+      "company": "Microsoft",
+      "track": "AI/ML",
+      "roles": "AI Engineer Intern; Applied Scientist Intern; Software Engineer Intern (AI)",
+      "priority": "Stretch",
+      "core": "Python; DSA; statistics/probability; ML fundamentals; SQL; model evaluation",
+      "helpful": "PyTorch/TensorFlow; NLP/LLMs; Azure; MLOps; research/project depth",
+      "rounds": "Resume screen → online coding/assessment (role-dependent) → technical interviews → behavioral/final",
+      "formats": "Online assessment; live coding; ML/technical discussion; behavioral",
+      "prepare": "DSA, ML fundamentals, metrics, overfitting, project decisions, behavioral examples",
+      "eligibility": "Check degree and graduation-year requirements; research-heavy Applied Scientist roles may require advanced study.",
+      "link": "https://careers.microsoft.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:amazon-sde-intern-sde-i-ml-engineer-applied-scientist-where-eligible",
+     "values": {
+      "company": "Amazon",
+      "track": "AI/ML + Full Stack",
+      "roles": "SDE Intern / SDE I; ML Engineer; Applied Scientist (where eligible)",
+      "priority": "Stretch",
+      "core": "One strong language (Java/Python); DSA; OOP; SQL; APIs; ML fundamentals for ML roles",
+      "helpful": "AWS; distributed systems; PyTorch; model deployment; React/TypeScript",
+      "rounds": "Online assessment → 1+ technical interviews → behavioral/leadership interview (varies by role)",
+      "formats": "Timed coding; live coding; project/CS fundamentals; behavioral questions",
+      "prepare": "DSA, coding complexity, DBMS, APIs, ML evaluation for AI roles, leadership-principle examples",
+      "eligibility": "Applied Scientist positions may require postgraduate/research qualifications; verify each listing.",
+      "link": "https://www.amazon.jobs/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:google-software-engineer-intern-ml-engineer-research-ai-roles-where-el",
+     "values": {
+      "company": "Google",
+      "track": "AI/ML",
+      "roles": "Software Engineer Intern; ML Engineer; Research/AI roles where eligible",
+      "priority": "Stretch",
+      "core": "Python/C++/Java; DSA; linear algebra; probability/statistics; ML fundamentals",
+      "helpful": "TensorFlow/JAX; deep learning; NLP; cloud; research publications for research roles",
+      "rounds": "Application/resume screen → coding/technical interviews → role-specific ML/research rounds → behavioral",
+      "formats": "Online coding; live coding; ML theory/case discussion; behavioral",
+      "prepare": "Algorithms, data structures, ML model selection, metrics, project deep dive",
+      "eligibility": "Research roles can have advanced-degree expectations; verify student/graduate eligibility.",
+      "link": "https://www.google.com/about/careers/applications/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:adobe-software-engineer-intern-ml-engineer-full-stack-engineer",
+     "values": {
+      "company": "Adobe",
+      "track": "AI/ML + Full Stack",
+      "roles": "Software Engineer Intern; ML Engineer; Full Stack Engineer",
+      "priority": "Stretch",
+      "core": "Java/Python/C++; DSA; OOP; DBMS; ML fundamentals for AI positions",
+      "helpful": "React/TypeScript; PyTorch; computer vision/NLP; cloud; APIs",
+      "rounds": "Online assessment (sometimes) → technical coding rounds → project/domain round → HR/behavioral",
+      "formats": "Coding test; live technical interview; project discussion; behavioral",
+      "prepare": "DSA, CS fundamentals, model evaluation for ML, frontend/backend architecture for full stack",
+      "eligibility": "Role and campus program determine degree eligibility and rounds.",
+      "link": "https://careers.adobe.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:accenture-ai-ml-engineer-data-ai-analyst-full-stack-engineer-applicati",
+     "values": {
+      "company": "Accenture",
+      "track": "AI/ML + Full Stack",
+      "roles": "AI/ML Engineer; Data/AI Analyst; Full Stack Engineer; Application Developer",
+      "priority": "Priority",
+      "core": "Python; SQL; statistics; ML basics; JavaScript/TypeScript; REST APIs; Git",
+      "helpful": "FastAPI; React; cloud (Azure/AWS/GCP); Docker; LLM/RAG basics",
+      "rounds": "Application/aptitude or cognitive test → coding/technical assessment → communication/technical interview → HR (varies)",
+      "formats": "Online assessment; coding test; technical/project interview; communication/behavioral",
+      "prepare": "Python/SQL, ML pipeline, API deployment, React/Node basics, project walkthrough",
+      "eligibility": "Check BCA eligibility for the exact role; some specialist postings require engineering or postgraduate degrees.",
+      "link": "https://www.accenture.com/in-en/careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:tcs-digital-prime-software-roles-ai-ml-engineer-when-open-full-stack-d",
+     "values": {
+      "company": "TCS",
+      "track": "AI/ML + Full Stack",
+      "roles": "Digital/Prime software roles; AI/ML Engineer (when open); Full Stack Developer",
+      "priority": "Priority",
+      "core": "Java/Python; DSA; OOP; SQL/DBMS; statistics and ML basics for AI roles",
+      "helpful": "React; Node.js; FastAPI; cloud; model deployment",
+      "rounds": "NQT/online assessment → coding (track-dependent) → technical interview → HR",
+      "formats": "Aptitude/reasoning; coding test; technical/project interview; HR",
+      "prepare": "DSA, OOP, DBMS/SQL, project deep dive; ML basics for AI-designated roles",
+      "eligibility": "Eligibility, degree, academic scores and graduation year vary by hiring track; verify BCA eligibility.",
+      "link": "https://www.tcs.com/careers/india",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:infosys-systems-engineer-specialist-programmer-data-ai-roles-full-stac",
+     "values": {
+      "company": "Infosys",
+      "track": "AI/ML + Full Stack",
+      "roles": "Systems Engineer; Specialist Programmer; Data/AI roles; Full Stack Developer",
+      "priority": "Priority",
+      "core": "Java/Python; DSA; SQL; OOP; Python data handling; ML fundamentals for AI roles",
+      "helpful": "React; Node.js; scikit-learn; cloud; GenAI/RAG basics",
+      "rounds": "Online assessment → coding/pseudocode (track-dependent) → technical interview → HR",
+      "formats": "Aptitude; coding; technical and project discussion; HR",
+      "prepare": "Problem solving, SQL, core CS, Python/ML concepts, explain project design choices",
+      "eligibility": "Some specialist tracks have strict degree/marks criteria; check the exact role.",
+      "link": "https://www.infosys.com/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:hcltech-fresher-ai-ml-developer-where-eligible-graduate-engineer-train",
+     "values": {
+      "company": "HCLTech",
+      "track": "AI/ML + Full Stack",
+      "roles": "Fresher AI/ML Developer (where eligible); Graduate Engineer Trainee; Full Stack Developer",
+      "priority": "Priority",
+      "core": "Python; SQL; ML algorithms; data preprocessing; JavaScript; REST APIs",
+      "helpful": "React/React Native; FastAPI; TensorFlow/PyTorch; cloud; Docker",
+      "rounds": "Application → online assessment (role-dependent) → technical interview → HR",
+      "formats": "Coding/aptitude test; technical interview; project discussion; HR",
+      "prepare": "Python, supervised/unsupervised learning, evaluation metrics, API integration, project explanation",
+      "eligibility": "A recent AI/ML fresher posting specified B.Tech; BCA eligibility is role-specific—check listing carefully.",
+      "link": "https://careers.hcltech.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:wipro-project-engineer-ai-ml-roles-when-open-full-stack-developer",
+     "values": {
+      "company": "Wipro",
+      "track": "AI/ML + Full Stack",
+      "roles": "Project Engineer; AI/ML roles when open; Full Stack Developer",
+      "priority": "Priority",
+      "core": "Python/Java; DSA; SQL; ML basics; JavaScript and APIs for full stack",
+      "helpful": "React Native; FastAPI; cloud; MLOps; Docker",
+      "rounds": "Online assessment → coding/technical interview → HR (varies by drive)",
+      "formats": "Aptitude; coding; technical/project discussion; HR",
+      "prepare": "DSA, programming fundamentals, SQL, ML concepts and project details",
+      "eligibility": "Check current campus/off-campus eligibility and degree requirements.",
+      "link": "https://careers.wipro.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:cognizant-genc-genc-next-ai-analytics-roles-full-stack-developer",
+     "values": {
+      "company": "Cognizant",
+      "track": "AI/ML + Full Stack",
+      "roles": "GenC/GenC Next; AI & Analytics roles; Full Stack Developer",
+      "priority": "Priority",
+      "core": "Java/Python; SQL; DSA; JavaScript; REST APIs; ML basics for AI roles",
+      "helpful": "React/React Native; cloud; FastAPI; deployment",
+      "rounds": "Communication/aptitude assessments → coding assessment (track-dependent) → technical/HR interview",
+      "formats": "Online assessment; coding; technical and behavioral interview",
+      "prepare": "Coding, SQL, OOP, project walkthrough, basic ML and API design",
+      "eligibility": "Check BCA and graduation-year eligibility in each drive.",
+      "link": "https://careers.cognizant.com/india-en/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:zoho-software-developer-full-stack-developer-ai-ml-engineer-when-avail",
+     "values": {
+      "company": "Zoho",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Developer; Full Stack Developer; AI/ML Engineer (when available)",
+      "priority": "Priority",
+      "core": "C/C++/Java/Python; DSA; OOP; DBMS; SQL; web fundamentals",
+      "helpful": "React; Node.js; Python ML; model serving; React Native",
+      "rounds": "Written/aptitude or programming rounds → practical coding/application round → technical interviews → HR (varies)",
+      "formats": "Written test; timed coding; build-a-program exercise; technical/HR",
+      "prepare": "Solve coding problems without over-relying on frameworks; build a small app; explain trade-offs",
+      "eligibility": "Role-specific degree criteria apply; verify current openings.",
+      "link": "https://www.zoho.com/careers.html",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:freshworks-software-engineer-full-stack-engineer-ai-ml-engineer-when-a",
+     "values": {
+      "company": "Freshworks",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer; Full Stack Engineer; AI/ML Engineer (when available)",
+      "priority": "Stretch",
+      "core": "JavaScript/TypeScript; React; Node.js or Java; SQL; DSA; APIs",
+      "helpful": "Python; LLM APIs; search/recommendation; cloud; observability",
+      "rounds": "Resume screen → coding/technical interviews → project/system discussion → behavioral (varies)",
+      "formats": "Coding; practical engineering; system/project discussion; behavioral",
+      "prepare": "Frontend state, APIs, DB design, testing, coding fundamentals, AI feature evaluation",
+      "eligibility": "Openings and student programs vary by location and season.",
+      "link": "https://www.freshworks.com/company/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:razorpay-software-engineer-intern-backend-full-stack-engineer-data-ml-",
+     "values": {
+      "company": "Razorpay",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer Intern; Backend/Full Stack Engineer; Data/ML roles when open",
+      "priority": "Stretch",
+      "core": "Java/Go/Python/JavaScript; DSA; SQL; APIs; data modeling",
+      "helpful": "React/TypeScript; distributed systems; fraud/risk ML; cloud; monitoring",
+      "rounds": "Resume screen → coding round(s) → technical/project or system-design discussion → behavioral",
+      "formats": "Online/live coding; backend/API design; project deep dive; behavioral",
+      "prepare": "DSA, API correctness, database transactions, reliability, ML metrics for relevant roles",
+      "eligibility": "Check whether the opening is internship, graduate, or experienced and confirm degree criteria.",
+      "link": "https://razorpay.com/jobs/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:phonepe-software-engineer-backend-engineer-data-science-ml-roles-when-",
+     "values": {
+      "company": "PhonePe",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer; Backend Engineer; Data Science/ML roles when open",
+      "priority": "Stretch",
+      "core": "Java/Kotlin/Python; DSA; SQL; API design; OOP",
+      "helpful": "React/React Native; distributed systems; risk/fraud ML; cloud",
+      "rounds": "Resume screen → coding/DSA rounds → technical/domain round → behavioral (varies)",
+      "formats": "Live coding; CS fundamentals; API/system discussion; project interview",
+      "prepare": "DSA, DBMS, concurrency basics, API design; ML/statistics for relevant roles",
+      "eligibility": "Many roles seek strong engineering fundamentals; check fresher eligibility on each listing.",
+      "link": "https://www.phonepe.com/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:meesho-sde-intern-sde-i-data-scientist-ml-engineer-when-open-full-stac",
+     "values": {
+      "company": "Meesho",
+      "track": "Full Stack + AI/ML",
+      "roles": "SDE Intern/SDE I; Data Scientist/ML Engineer (when open); Full Stack Developer",
+      "priority": "Stretch",
+      "core": "Java/Python; DSA; SQL; backend APIs; data analysis for ML roles",
+      "helpful": "React/TypeScript; experimentation; recommendation/ranking; cloud",
+      "rounds": "Online assessment → coding interviews → technical/project or design round → behavioral",
+      "formats": "Coding test; live coding; data/ML case discussion; project interview",
+      "prepare": "DSA, SQL, experiment metrics, model evaluation, APIs and frontend/backend fundamentals",
+      "eligibility": "Entry-level roles may be limited; check graduation year and experience requirements.",
+      "link": "https://www.meesho.io/jobs",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:groww-software-engineer-backend-full-stack-engineer-data-ml-roles-when",
+     "values": {
+      "company": "Groww",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer; Backend/Full Stack Engineer; Data/ML roles when open",
+      "priority": "Stretch",
+      "core": "Java/Kotlin/Python; DSA; SQL; REST APIs; OOP",
+      "helpful": "React/TypeScript; analytics; risk/fraud ML; cloud",
+      "rounds": "Resume screen → coding round(s) → technical/domain discussion → behavioral (varies)",
+      "formats": "Live coding; CS fundamentals; API/database discussion; project deep dive",
+      "prepare": "DSA, data modeling, API reliability, testing, ML concepts for AI/data roles",
+      "eligibility": "Check the role's experience level and degree criteria.",
+      "link": "https://groww.in/careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:browserstack-software-engineer-frontend-full-stack-engineer-qa-automat",
+     "values": {
+      "company": "BrowserStack",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer; Frontend/Full Stack Engineer; QA Automation Engineer",
+      "priority": "Priority",
+      "core": "JavaScript/TypeScript; React; Node.js; DSA; testing; APIs; SQL",
+      "helpful": "React Native; browser automation; CI/CD; Python; cloud",
+      "rounds": "Application → coding/technical screen → practical/system/project round → behavioral (varies)",
+      "formats": "Coding; practical debugging/testing; technical discussion; behavioral",
+      "prepare": "React component design, async JS, API integration, testing, debugging and project depth",
+      "eligibility": "Look for intern/early-career listings; openings vary.",
+      "link": "https://www.browserstack.com/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:postman-software-engineer-intern-full-stack-engineer-ai-enabled-develo",
+     "values": {
+      "company": "Postman",
+      "track": "Full Stack + AI/ML",
+      "roles": "Software Engineer Intern; Full Stack Engineer; AI-enabled developer tools roles",
+      "priority": "Stretch",
+      "core": "JavaScript/TypeScript; React; APIs/HTTP; DSA; SQL; testing",
+      "helpful": "Node.js; React Native; Python/LLM APIs; developer tooling",
+      "rounds": "Resume screen → coding/technical rounds → project/design discussion → behavioral (varies)",
+      "formats": "Coding; API-focused technical interview; project discussion; behavioral",
+      "prepare": "HTTP, REST, auth, API debugging, frontend/backend trade-offs, testing",
+      "eligibility": "Confirm role level and location; many openings may require prior experience.",
+      "link": "https://www.postman.com/company/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:gnosify-ai-ml-engineer-full-stack-developer-react-native-developer",
+     "values": {
+      "company": "Gnosify",
+      "track": "AI/ML + Full Stack + React Native",
+      "roles": "AI/ML Engineer; Full Stack Developer; React Native Developer",
+      "priority": "Priority / verify opening",
+      "core": "AI/ML: Python, ML basics, FastAPI, LLM APIs. Full stack: TypeScript, Node.js, PostgreSQL. Mobile: React Native",
+      "helpful": "RAG; vector databases; cloud; iOS/Android debugging; CI/CD",
+      "rounds": "Published process: application review → initial discussion → technical/skill evaluation → final interview",
+      "formats": "Recruiter/initial call; practical task or technical discussion; final team interview",
+      "prepare": "Build a small API/mobile feature, explain model or architecture choices, show deployed project",
+      "eligibility": "Company careers page describes these role families; confirm whether a matching opening is active.",
+      "link": "https://www.gnosify.in/careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:radialbrain-ai-engineering-intern-software-engineer-trainee-ai-full-st",
+     "values": {
+      "company": "RadialBrain",
+      "track": "AI/ML + Full Stack",
+      "roles": "AI Engineering Intern; Software Engineer Trainee (AI + Full Stack)",
+      "priority": "Priority / verify opening",
+      "core": "Python; TypeScript; web fundamentals; APIs; Git; AI/LLM basics",
+      "helpful": "Agents; automation; RAG; testing; deployment; React Native as a bonus",
+      "rounds": "Published process: application → AI-led conversation if shortlisted → assignment/founder conversation",
+      "formats": "Written application; AI interview; practical build assignment; founder discussion",
+      "prepare": "GitHub quality, a small end-to-end build, reasoning, AI-assisted development with validation",
+      "eligibility": "Careers page lists remote India internship/trainee tracks; verify active status and criteria.",
+      "link": "https://www.radialbrain.com/careers/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:vatsal-technosoft-react-react-native-fresher-mobile-app-developer",
+     "values": {
+      "company": "Vatsal Technosoft",
+      "track": "Full Stack + React Native",
+      "roles": "React + React Native Fresher; Mobile App Developer",
+      "priority": "Priority / verify opening",
+      "core": "React; React Native; JavaScript; TypeScript basics; HTML/CSS; REST APIs; JSON; Git",
+      "helpful": "Redux; testing; Android/iOS build process; backend/API integration",
+      "rounds": "Published listing does not fully specify rounds; expect application review → skill assessment/interview → final discussion",
+      "formats": "Resume review; practical coding/task; technical discussion; HR",
+      "prepare": "Hooks, component lifecycle, navigation, API calls, responsive UI, debugging",
+      "eligibility": "A fresher listing was found; verify current availability, shift, pay and terms before applying.",
+      "link": "https://www.recruit.vatsaltechnosoft.com/jobs/react-react-native-freshers",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:origin-softwares-full-stack-developer-ai-enabled-application-developer",
+     "values": {
+      "company": "Origin Softwares",
+      "track": "Full Stack + AI/ML",
+      "roles": "Full Stack Developer; AI-enabled application developer",
+      "priority": "Priority / verify opening",
+      "core": "JavaScript/TypeScript; Node.js; SQL; APIs; Git; testing",
+      "helpful": "Python/LLM APIs; cloud; deployment; React Native",
+      "rounds": "Published process: application review → 30-minute technical screen/practical exercise → team lead/senior engineer interview → offer",
+      "formats": "Practical exercise; technical discussion; team interview",
+      "prepare": "Explain shipped work, debugging process, code quality, architecture choices",
+      "eligibility": "Confirm active vacancy and level; use the official careers page.",
+      "link": "https://www.originsoftwares.com/careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:tcs-digital-track-digital-prime-fresher-roles-ai-related-projects-role",
+     "values": {
+      "company": "TCS / Digital track",
+      "track": "AI/ML + Full Stack",
+      "roles": "Digital/Prime fresher roles; AI-related projects/roles where available",
+      "priority": "Priority",
+      "core": "Java/Python; DSA; OOP; DBMS/SQL; OS/network basics",
+      "helpful": "React; Node.js; ML fundamentals; cloud",
+      "rounds": "NQT or equivalent assessment → coding/technical interview → HR; track-specific",
+      "formats": "Aptitude/reasoning; coding; technical and project interview",
+      "prepare": "DSA, SQL, OOP, project explanation; AI concepts only if role requires them",
+      "eligibility": "This is a hiring track, not a separate company. Confirm current hiring program and BCA eligibility.",
+      "link": "https://www.tcs.com/careers/india",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:hcltech-ai-roles-fresher-aiml-developer-data-ai-trainee-when-open",
+     "values": {
+      "company": "HCLTech / AI roles",
+      "track": "AI/ML",
+      "roles": "Fresher AIML Developer; Data/AI trainee (when open)",
+      "priority": "Priority / verify eligibility",
+      "core": "Python; NumPy; pandas; scikit-learn; statistics; ML algorithms; SQL",
+      "helpful": "PyTorch/TensorFlow; FastAPI; Docker; cloud; model monitoring",
+      "rounds": "Application → assessment → technical ML/Python round → HR (role-dependent)",
+      "formats": "Python/SQL coding; ML theory; project deep dive; behavioral",
+      "prepare": "Data cleaning, train/test split, leakage, metrics, overfitting, deployment",
+      "eligibility": "Some posted fresher AIML roles require B.Tech; BCA candidates must verify eligibility before applying.",
+      "link": "https://careers.hcltech.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:microsoft-mobile-roles-software-engineer-intern-mobile-full-stack-engi",
+     "values": {
+      "company": "Microsoft / mobile roles",
+      "track": "Full Stack + React Native",
+      "roles": "Software Engineer Intern; Mobile/Full Stack Engineer (where available)",
+      "priority": "Stretch",
+      "core": "JavaScript/TypeScript; React; React Native; APIs; DSA; Git",
+      "helpful": "Native modules; navigation; state management; app performance; testing",
+      "rounds": "Resume screen → coding interview(s) → role-specific technical/project round → behavioral",
+      "formats": "Coding; practical mobile/frontend discussion; project deep dive",
+      "prepare": "React hooks, navigation, async storage, REST APIs, debugging, app lifecycle",
+      "eligibility": "React Native may not be explicitly named in every opening; search role descriptions.",
+      "link": "https://careers.microsoft.com/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:amazon-mobile-full-stack-roles-sde-intern-sde-i-mobile-engineer-where-",
+     "values": {
+      "company": "Amazon / mobile-full stack roles",
+      "track": "Full Stack + React Native",
+      "roles": "SDE Intern/SDE I; Mobile Engineer (where available)",
+      "priority": "Stretch",
+      "core": "Java/JavaScript; DSA; OOP; REST APIs; SQL/NoSQL",
+      "helpful": "React Native; app testing; AWS; observability",
+      "rounds": "Online assessment → technical coding rounds → behavioral/leadership round",
+      "formats": "Timed coding; live coding; project/architecture discussion; behavioral",
+      "prepare": "DSA, APIs, state management, app performance and behavioral examples",
+      "eligibility": "Search exact mobile role titles; React Native is not guaranteed to be used by every team.",
+      "link": "https://www.amazon.jobs/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    },
+    {
+     "id": "companies:stayboba-full-stack-developer-college-hiring-react-native-as-a-bonus-s",
+     "values": {
+      "company": "StayBoba",
+      "track": "Full Stack + React Native",
+      "roles": "Full Stack Developer (College Hiring); React Native as a bonus skill",
+      "priority": "Priority / verify opening",
+      "core": "Frontend/backend fundamentals; TypeScript; database; Git; AI-assisted development",
+      "helpful": "React Native; cloud; Docker; API design",
+      "rounds": "Published process: GitHub/application review → short video call → one-week evaluation task → internship decision",
+      "formats": "Portfolio review; project discussion; take-home practical assignment",
+      "prepare": "Code quality, architecture decisions, end-to-end build, use of AI coding tools responsibly",
+      "eligibility": "Listing describes a college-hiring internship; review assignment duration and terms before accepting.",
+      "link": "https://careers.stayboba.com/apply/full-stack-college/",
+      "status": "Not started",
+      "appliedDate": "",
+      "notes": "",
+      "nextAction": "Open link; verify role, eligibility, deadline; tailor resume"
+     }
+    }
+   ]
+  },
+  {
+   "key": "apply",
+   "title": "Apply links",
+   "kind": "tracker",
+   "group": "jobs",
+   "primary": "company",
+   "secondary": "roles",
+   "groupBy": null,
+   "filters": [
+    "sourceType"
+   ],
+   "statusSet": "application",
+   "subtitle": "Direct career pages and role links. A link isn't a guarantee that a vacancy is still open, so check the deadline and eligibility before applying.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "company",
+     "label": "Company / portal",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "roles",
+     "label": "Role / track",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "link",
+     "label": "Apply link",
+     "type": "link",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "checked",
+     "label": "Last checked",
+     "type": "text",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "verify",
+     "label": "What to verify before applying",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "sourceType",
+     "label": "Source type",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "appliedDate",
+     "label": "Applied date",
+     "type": "date",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "nextAction",
+     "label": "Next action",
+     "type": "input",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "apply:sabre-ai-labs-ai-ml-research-intern-full-stack-developer-mobile-app-de",
+     "values": {
+      "company": "Sabre AI Labs",
+      "roles": "AI/ML Research Intern; Full Stack Developer; Mobile App Developer",
+      "link": "https://careers.sabreailabs.in/opportunities",
+      "checked": "10 Oct 2026",
+      "verify": "Check role page, eligibility, deadlines and whether application is still open",
+      "sourceType": "Company opportunities portal",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:radialbrain-ai-engineering-intern-software-engineer-trainee-ai-full-st",
+     "values": {
+      "company": "RadialBrain",
+      "roles": "AI Engineering Intern; Software Engineer Trainee (AI + Full Stack)",
+      "link": "https://www.radialbrain.com/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Current students for internship; trainee track for full-time; inspect application page",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:pritas-ai-ml-intern-full-stack-developer-intern-frontend-backend-inter",
+     "values": {
+      "company": "Pritas",
+      "roles": "AI/ML Intern; Full Stack Developer Intern; Frontend/Backend Intern",
+      "link": "https://pritas.in/company/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Remote internship; duration and terms; confirm open form and work expectations",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:astrizion-technologies-ai-ml-engineer-intern-full-stack-developer-inte",
+     "values": {
+      "company": "Astrizion Technologies",
+      "roles": "AI/ML Engineer Intern; Full Stack Developer Intern; Mobile App Developer",
+      "link": "https://astriziontechnologies.com/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Confirm current vacancy, selection process, stipend and company details",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:globexcoders-ai-ml-engineer-intern-full-stack-developer-intern",
+     "values": {
+      "company": "GlobeXcoders",
+      "roles": "AI/ML Engineer Intern; Full Stack Developer Intern",
+      "link": "https://www.globexcoders.in/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Page describes unpaid internship; carefully assess terms, learning and PPO conditions before accepting",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:kreeda-labs-via-vibrantminds-full-stack-developer-ai-ml-engineer-inter",
+     "values": {
+      "company": "Kreeda Labs via VibrantMinds",
+      "roles": "Full Stack Developer; AI/ML Engineer Intern",
+      "link": "https://candidates.vibrantminds.in/campus-drives/detail.php?id=19",
+      "checked": "Historical posting; verify status",
+      "verify": "Search result showed deadline 7 Sep 2026, which has passed; use only to check for a new drive",
+      "sourceType": "Recruitment drive page; deadline may be past",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:growify-india-react-native-intern-developer",
+     "values": {
+      "company": "Growify India",
+      "roles": "React Native Intern Developer",
+      "link": "https://growifyindia.com/careers/react-native-intern-developer",
+      "checked": "Historical posting; verify status",
+      "verify": "Search result showed deadline 22 Aug 2026, which has passed; check if reposted",
+      "sourceType": "Company role page; deadline may be past",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:nexentia-full-stack-developer-intern",
+     "values": {
+      "company": "Nexentia",
+      "roles": "Full Stack Developer Intern",
+      "link": "https://careers.nexentia.in/",
+      "checked": "10 Oct 2026",
+      "verify": "Page showed a role and internship details; verify the application window before submitting",
+      "sourceType": "Company hiring portal",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:microsoft-ai-ml-software-engineering-mobile-roles",
+     "values": {
+      "company": "Microsoft",
+      "roles": "AI/ML, Software Engineering, mobile roles",
+      "link": "https://careers.microsoft.com/",
+      "checked": "10 Oct 2026",
+      "verify": "Filter India, internship/graduate, and verify degree requirements",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:amazon-sde-ml-ai-mobile-roles",
+     "values": {
+      "company": "Amazon",
+      "roles": "SDE, ML, AI, mobile roles",
+      "link": "https://www.amazon.jobs/",
+      "checked": "10 Oct 2026",
+      "verify": "Filter India and student/entry-level; each role has its own eligibility",
+      "sourceType": "Official company jobs",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:google-software-engineering-ml-ai-roles",
+     "values": {
+      "company": "Google",
+      "roles": "Software Engineering, ML/AI roles",
+      "link": "https://www.google.com/about/careers/applications/",
+      "checked": "10 Oct 2026",
+      "verify": "Filter India and early career; research roles may require advanced degrees",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:adobe-software-engineering-ai-ml-roles",
+     "values": {
+      "company": "Adobe",
+      "roles": "Software Engineering, AI/ML roles",
+      "link": "https://careers.adobe.com/",
+      "checked": "10 Oct 2026",
+      "verify": "Filter intern/new graduate and India; check role requirements",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:accenture-ai-ml-genai-full-stack-roles",
+     "values": {
+      "company": "Accenture",
+      "roles": "AI/ML, GenAI, full-stack roles",
+      "link": "https://www.accenture.com/in-en/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Filter India and entry-level; verify BCA eligibility",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:tcs-graduate-software-roles-digital-tracks",
+     "values": {
+      "company": "TCS",
+      "roles": "Graduate software roles, digital tracks",
+      "link": "https://www.tcs.com/careers/india",
+      "checked": "10 Oct 2026",
+      "verify": "Check hiring program, BCA eligibility, marks and graduation year",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:infosys-graduate-roles-ai-data-full-stack",
+     "values": {
+      "company": "Infosys",
+      "roles": "Graduate roles, AI/data/full-stack",
+      "link": "https://www.infosys.com/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Check degree and campus/off-campus conditions",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:hcltech-ai-ml-graduate-engineering-mobile-full-stack",
+     "values": {
+      "company": "HCLTech",
+      "roles": "AI/ML, graduate engineering, mobile/full-stack",
+      "link": "https://careers.hcltech.com/",
+      "checked": "10 Oct 2026",
+      "verify": "Some AI/ML fresher posts require B.Tech; check each job",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:wipro-software-ai-data-mobile-full-stack",
+     "values": {
+      "company": "Wipro",
+      "roles": "Software, AI/data, mobile/full-stack",
+      "link": "https://careers.wipro.com/",
+      "checked": "10 Oct 2026",
+      "verify": "Check fresher hiring cycle and degree eligibility",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:cognizant-graduate-software-roles-ai-data-full-stack",
+     "values": {
+      "company": "Cognizant",
+      "roles": "Graduate software roles, AI/data, full-stack",
+      "link": "https://careers.cognizant.com/india-en/",
+      "checked": "10 Oct 2026",
+      "verify": "Check current drive requirements and graduation year",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:zoho-software-developer-web-full-stack-ai-roles",
+     "values": {
+      "company": "Zoho",
+      "roles": "Software developer, web/full-stack, AI roles",
+      "link": "https://www.zoho.com/careers.html",
+      "checked": "10 Oct 2026",
+      "verify": "Search developer openings; role-specific eligibility",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:freshworks-software-engineering-ai-enabled-product-roles",
+     "values": {
+      "company": "Freshworks",
+      "roles": "Software engineering, AI-enabled product roles",
+      "link": "https://www.freshworks.com/company/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Check intern/early-career listings and location",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:razorpay-software-engineering-data-ml-roles",
+     "values": {
+      "company": "Razorpay",
+      "roles": "Software engineering, data/ML roles",
+      "link": "https://razorpay.com/jobs/",
+      "checked": "10 Oct 2026",
+      "verify": "Check role level, experience, and India location",
+      "sourceType": "Official company jobs",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:phonepe-software-engineering-data-ml-roles",
+     "values": {
+      "company": "PhonePe",
+      "roles": "Software engineering, data/ML roles",
+      "link": "https://www.phonepe.com/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Check entry-level availability and required experience",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:meesho-sde-data-science-ml-roles",
+     "values": {
+      "company": "Meesho",
+      "roles": "SDE, data science/ML roles",
+      "link": "https://www.meesho.io/jobs",
+      "checked": "10 Oct 2026",
+      "verify": "Check internship/fresher listings and graduation-year criteria",
+      "sourceType": "Official company jobs",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:groww-software-engineering-data-ml-roles",
+     "values": {
+      "company": "Groww",
+      "roles": "Software engineering, data/ML roles",
+      "link": "https://groww.in/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Check role level and experience requirements",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:browserstack-software-engineering-frontend-full-stack-qa-automation",
+     "values": {
+      "company": "BrowserStack",
+      "roles": "Software engineering, frontend/full-stack, QA automation",
+      "link": "https://www.browserstack.com/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Check intern/early-career listings and role-specific skills",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:postman-developer-tools-software-engineering",
+     "values": {
+      "company": "Postman",
+      "roles": "Developer tools, software engineering",
+      "link": "https://www.postman.com/company/careers/",
+      "checked": "10 Oct 2026",
+      "verify": "Check entry-level roles and location requirements",
+      "sourceType": "Official company careers",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:gnosify-ai-ml-full-stack-react-native-role-families",
+     "values": {
+      "company": "Gnosify",
+      "roles": "AI/ML, full-stack, React Native role families",
+      "link": "https://www.gnosify.in/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Confirm an active vacancy and exact job description",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    },
+    {
+     "id": "apply:origin-softwares-full-stack-ai-enabled-development",
+     "values": {
+      "company": "Origin Softwares",
+      "roles": "Full Stack / AI-enabled development",
+      "link": "https://www.originsoftwares.com/careers",
+      "checked": "10 Oct 2026",
+      "verify": "Confirm role level and active vacancy",
+      "sourceType": "Company careers page",
+      "status": "Not started",
+      "appliedDate": "",
+      "nextAction": "Open link; verify active role and BCA eligibility",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "interview",
+   "title": "Interview rounds",
+   "kind": "reference",
+   "group": "jobs",
+   "primary": "stage",
+   "secondary": null,
+   "groupBy": null,
+   "filters": [],
+   "statusSet": null,
+   "subtitle": "What each interview stage usually involves and how to prepare. Not every company uses every stage.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "stage",
+     "label": "Round / stage",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "formats",
+     "label": "Common formats",
+     "type": "text",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "ai",
+     "label": "AI/ML focus",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "fullstack",
+     "label": "Full Stack / React Native focus",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "checklist",
+     "label": "Preparation checklist",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "note",
+     "label": "Important note",
+     "type": "long",
+     "table": false,
+     "editable": false
+    }
+   ],
+   "rows": [
+    {
+     "id": "interview:1-resume-application-screen",
+     "values": {
+      "stage": "1. Resume / application screen",
+      "formats": "ATS keyword scan; recruiter review; portfolio/GitHub review",
+      "ai": "Python, ML projects, datasets, evaluation results, deployment links",
+      "fullstack": "React/React Native apps, APIs, database, deployment, GitHub quality",
+      "checklist": "Tailor resume to JD; put strongest project and live links near top; quantify results",
+      "note": "Not every company uses every stage."
+     }
+    },
+    {
+     "id": "interview:2-aptitude-online-assessment",
+     "values": {
+      "stage": "2. Aptitude / online assessment",
+      "formats": "Timed aptitude, reasoning, MCQ, coding platform; sometimes proctored",
+      "ai": "Python basics, statistics, SQL, ML fundamentals if specified",
+      "fullstack": "DSA, JavaScript/Java/Python, SQL, basic web concepts",
+      "checklist": "Practice timed questions; read role-specific test instructions",
+      "note": "Format and cutoffs vary by hiring program."
+     }
+    },
+    {
+     "id": "interview:3-coding-dsa",
+     "values": {
+      "stage": "3. Coding / DSA",
+      "formats": "Online assessment; shared-editor live coding; sometimes take-home",
+      "ai": "Python coding, data manipulation, algorithms; SQL",
+      "fullstack": "DSA in chosen language; JavaScript async concepts; SQL",
+      "checklist": "Explain approach, complexity, edge cases, tests; write clean code",
+      "note": "Some practical startups may prioritize projects over DSA."
+     }
+    },
+    {
+     "id": "interview:4-role-specific-technical",
+     "values": {
+      "stage": "4. Role-specific technical",
+      "formats": "Live interview, whiteboard/shared editor, case study, practical task",
+      "ai": "Statistics, model choice, feature engineering, leakage, metrics, deployment, ML system reasoning",
+      "fullstack": "React hooks/state, REST APIs, DB schema, auth, debugging, mobile navigation/lifecycle",
+      "checklist": "Use a structured explanation; justify trade-offs and failure handling",
+      "note": "For React Native, be ready to demonstrate an actual mobile build."
+     }
+    },
+    {
+     "id": "interview:5-project-assignment",
+     "values": {
+      "stage": "5. Project / assignment",
+      "formats": "Take-home assignment; code review; portfolio walkthrough; pair programming",
+      "ai": "Reproduce experiment; baseline comparison; model card; API serving; evaluation",
+      "fullstack": "Build feature end-to-end; integrate API; handle loading/errors; test and document",
+      "checklist": "Time-box; write README; include setup instructions and known limitations",
+      "note": "Review unpaid assignment length and terms before accepting."
+     }
+    },
+    {
+     "id": "interview:6-system-architecture-discussion",
+     "values": {
+      "stage": "6. System / architecture discussion",
+      "formats": "System design or practical architecture discussion; more common at higher levels",
+      "ai": "Data pipeline, inference endpoint, model monitoring, latency/cost, model/data versioning",
+      "fullstack": "Client/API/database architecture, auth, caching, error handling, scaling; mobile offline/network behavior",
+      "checklist": "Start with requirements; sketch components/data flow; discuss trade-offs",
+      "note": "Freshers may get a smaller design discussion rather than full system design."
+     }
+    },
+    {
+     "id": "interview:7-behavioral-hr",
+     "values": {
+      "stage": "7. Behavioral / HR",
+      "formats": "Recruiter call; manager interview; STAR questions",
+      "ai": "Motivation, responsible AI, handling ambiguous data/results, teamwork",
+      "fullstack": "Ownership, debugging, teamwork, deadlines, learning, user focus",
+      "checklist": "Prepare examples of conflict, failure, initiative, feedback, and learning",
+      "note": "Company-specific values and format vary."
+     }
+    },
+    {
+     "id": "interview:8-final-verification-offer",
+     "values": {
+      "stage": "8. Final verification / offer",
+      "formats": "Eligibility, documents, compensation, location, background checks",
+      "ai": "Degree/marks, graduation year, internship dates",
+      "fullstack": "Degree/marks, graduation year, location/work mode",
+      "checklist": "Verify written offer, role, compensation, joining date and any bond/terms",
+      "note": "Never pay recruitment or placement fees to obtain a job."
+     }
+    }
+   ]
+  },
+  {
+   "key": "skills",
+   "title": "Skills reference",
+   "kind": "catalog",
+   "group": "library",
+   "primary": "skill",
+   "secondary": "track",
+   "groupBy": "category",
+   "filters": [
+    "track",
+    "priority"
+   ],
+   "statusSet": "learning",
+   "subtitle": "The broader skill catalogue. The roadmaps are the guided paths; use this list to look things up.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "track",
+     "label": "Track",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "category",
+     "label": "Category",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "skill",
+     "label": "Skill / topic",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "priority",
+     "label": "Priority",
+     "type": "badge",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "confidence",
+     "label": "Confidence",
+     "type": "confidence",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "learn",
+     "label": "What to learn",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "practice",
+     "label": "Practice task",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "resource",
+     "label": "Resource",
+     "type": "auto",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "approach",
+     "label": "Approach",
+     "type": "long",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "skills:python-fundamentals-both",
+     "values": {
+      "track": "Both",
+      "category": "Programming foundations",
+      "skill": "Python fundamentals",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Learn syntax, functions, collections, exceptions, modules, venv, typing basics",
+      "practice": "Write 3 small scripts and one reusable module",
+      "resource": "https://docs.python.org/3/tutorial/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:javascript-es6-both",
+     "values": {
+      "track": "Both",
+      "category": "Programming foundations",
+      "skill": "JavaScript ES6+",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Closures basics, destructuring, array methods, modules, promises, async/await, error handling",
+      "practice": "Build API-fetching utility with loading/error handling",
+      "resource": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:typescript-both",
+     "values": {
+      "track": "Both",
+      "category": "Programming foundations",
+      "skill": "TypeScript",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Types, interfaces, unions, generics basics, narrowing, typing React props/API data",
+      "practice": "Convert one React component and API service to TypeScript",
+      "resource": "https://www.typescriptlang.org/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:dsa-big-o-both",
+     "values": {
+      "track": "Both",
+      "category": "CS fundamentals",
+      "skill": "DSA + Big-O",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Arrays, strings, hash maps, stacks/queues, linked lists, trees, graphs, recursion, sorting/searching, complexity",
+      "practice": "Solve and explain 50+ curated problems; track patterns",
+      "resource": "https://leetcode.com/problemset/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:oop-core-cs-both",
+     "values": {
+      "track": "Both",
+      "category": "CS fundamentals",
+      "skill": "OOP + core CS",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "OOP, exceptions, collections, DBMS, OS and networking fundamentals",
+      "practice": "Prepare concise explanations and examples",
+      "resource": "https://www.geeksforgeeks.org/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:git-github-both",
+     "values": {
+      "track": "Both",
+      "category": "Developer workflow",
+      "skill": "Git/GitHub",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Branches, commits, pull requests, merge conflicts, issues, README",
+      "practice": "Maintain clean repos with meaningful commits",
+      "resource": "https://docs.github.com/en",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:linux-cli-debugging-both",
+     "values": {
+      "track": "Both",
+      "category": "Developer workflow",
+      "skill": "Linux/CLI + debugging",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Navigate files, env vars, logs, processes, curl, ports, basic shell commands",
+      "practice": "Debug a local app using logs and curl",
+      "resource": "https://missing.csail.mit.edu/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:linear-algebra-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Math foundations",
+      "skill": "Linear algebra",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Vectors, matrices, dot product, matrix multiplication, norms, intuition for embeddings",
+      "practice": "Explain vector similarity and calculate cosine similarity",
+      "resource": "https://www.khanacademy.org/math/linear-algebra",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:probability-statistics-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Math foundations",
+      "skill": "Probability + statistics",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Mean/variance, distributions, conditional probability, Bayes, sampling, confidence intervals, correlation vs causation",
+      "practice": "Explain uncertainty and select an evaluation metric",
+      "resource": "https://www.khanacademy.org/math/statistics-probability",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:numpy-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Data engineering",
+      "skill": "NumPy",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Arrays, broadcasting, vectorization, indexing, random seeds",
+      "practice": "Replace loops with vectorized operations in a notebook",
+      "resource": "https://numpy.org/doc/stable/user/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:pandas-eda-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Data engineering",
+      "skill": "pandas + EDA",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Cleaning missing values, duplicates, joins, groupby, reshape, visualization, leakage awareness",
+      "practice": "Create a reproducible EDA notebook with conclusions",
+      "resource": "https://pandas.pydata.org/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:sql-for-analytics-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Data engineering",
+      "skill": "SQL for analytics",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Joins, CTEs, subqueries, window functions, aggregation, indexes basics",
+      "practice": "Solve 30 SQL questions and analyze a dataset",
+      "resource": "https://sqlbolt.com/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:supervised-learning-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Supervised learning",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Linear/logistic regression, decision trees, random forests, gradient boosting, kNN, SVM basics",
+      "practice": "Train baselines and compare results on a real dataset",
+      "resource": "https://scikit-learn.org/stable/supervised_learning.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:unsupervised-learning-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Unsupervised learning",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "K-means, hierarchical clustering, PCA, anomaly detection basics",
+      "practice": "Cluster a dataset and explain limitations",
+      "resource": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:feature-engineering-preprocessing-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Feature engineering + preprocessing",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Encoding, scaling, imputation, pipelines, class imbalance, train/validation/test splits",
+      "practice": "Build preprocessing with sklearn Pipeline/ColumnTransformer",
+      "resource": "https://scikit-learn.org/stable/modules/compose.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:model-evaluation-validation-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Model evaluation + validation",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Confusion matrix, precision, recall, F1, ROC-AUC, MAE/RMSE, cross-validation, threshold selection",
+      "practice": "Write a short model evaluation report and justify metrics",
+      "resource": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:overfitting-leakage-regularization-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Overfitting, leakage, regularization",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Bias/variance, leakage, L1/L2, data split strategy, baseline comparison",
+      "practice": "Identify and fix leakage in a sample pipeline",
+      "resource": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:explainability-responsible-ml-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Machine learning",
+      "skill": "Explainability + responsible ML",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Feature importance, calibration, fairness, privacy, limitations, data provenance",
+      "practice": "Document limitations and possible failure modes",
+      "resource": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:neural-network-fundamentals-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "Neural network fundamentals",
+      "priority": "Must-have for DL roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tensors, layers, activations, loss, backprop intuition, optimizers, batch size, epochs",
+      "practice": "Train a small neural net and chart training/validation loss",
+      "resource": "https://www.deeplearning.ai/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:pytorch-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "PyTorch",
+      "priority": "Choose one framework first",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tensors, Dataset/DataLoader, model class, training loop, autograd, save/load checkpoints",
+      "practice": "Build and train a small classifier; save inference code",
+      "resource": "https://pytorch.org/tutorials/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:tensorflow-keras-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "TensorFlow/Keras",
+      "priority": "Alternative framework",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Sequential/Functional APIs, datasets, callbacks, model save/load",
+      "practice": "Recreate a simple classifier only if target roles ask for it",
+      "resource": "https://www.tensorflow.org/tutorials",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:cnns-computer-vision-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "CNNs / computer vision",
+      "priority": "Role-dependent",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Convolution, pooling, transfer learning, augmentation, classification metrics",
+      "practice": "Fine-tune a pretrained image model",
+      "resource": "https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:sequence-models-transformers-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "Sequence models / Transformers",
+      "priority": "Must-have for GenAI",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tokenization, attention intuition, embeddings, positional encoding, context window",
+      "practice": "Explain transformer flow and compare embeddings",
+      "resource": "https://huggingface.co/learn",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:hugging-face-ecosystem-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deep learning",
+      "skill": "Hugging Face ecosystem",
+      "priority": "Must-have for modern NLP/GenAI",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Transformers, model/tokenizer loading, inference pipelines, datasets, model cards",
+      "practice": "Run a small pretrained model and document license/limits",
+      "resource": "https://huggingface.co/learn",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:openai-api-basics-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "OpenAI API basics",
+      "priority": "Must-have for OpenAI-integrated roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "API keys via env vars, SDK setup, model requests, errors, retries, timeouts, token/cost awareness",
+      "practice": "Build a small server-side endpoint calling an OpenAI model; never expose keys in frontend",
+      "resource": "https://platform.openai.com/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:structured-outputs-tool-function-calling-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "Structured outputs + tool/function calling",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "JSON schema outputs, tool definitions, validation, safe execution boundaries",
+      "practice": "Create a tool-calling demo with validated arguments",
+      "resource": "https://platform.openai.com/docs/guides/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:streaming-conversation-state-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "Streaming + conversation state",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Streaming responses, conversation history, token limits, context management",
+      "practice": "Build streaming chat UI backed by server API",
+      "resource": "https://platform.openai.com/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:prompt-design-testing-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "Prompt design + testing",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Clear instructions, examples, delimiters, prompt versioning, eval sets, injection awareness",
+      "practice": "Create 20 test prompts and score outputs against criteria",
+      "resource": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:embeddings-semantic-similarity-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "Embeddings + semantic similarity",
+      "priority": "Must-have for RAG",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Embedding vectors, cosine similarity, chunking, similarity search, metadata filters",
+      "practice": "Compare keyword search vs vector similarity on 20 queries",
+      "resource": "https://platform.openai.com/docs/guides/embeddings",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:llm-evaluation-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "OpenAI + GenAI",
+      "skill": "LLM evaluation",
+      "priority": "Must-have for production GenAI",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Golden datasets, correctness/relevance, groundedness, latency, cost, human review",
+      "practice": "Create an eval spreadsheet and compare prompt/model versions",
+      "resource": "https://platform.openai.com/docs/guides/evals",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:rag-end-to-end-architecture-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "RAG",
+      "skill": "RAG end-to-end architecture",
+      "priority": "Must-have for RAG roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Ingestion, parsing, chunking, embeddings, indexing, retrieval, context assembly, generation, citations",
+      "practice": "Build a document Q&A app that cites source chunks",
+      "resource": "https://www.deeplearning.ai/short-courses/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:document-parsing-chunking-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "RAG",
+      "skill": "Document parsing + chunking",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "PDF/text extraction, chunk size/overlap, metadata, table handling, source IDs",
+      "practice": "Index a small collection of PDFs and inspect chunks",
+      "resource": "https://python.langchain.com/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:vector-databases-search-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "RAG",
+      "skill": "Vector databases / search",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "pgvector, Chroma, FAISS or another store; top-k, filters, cosine/dot distance, persistence",
+      "practice": "Implement one vector store and test retrieval quality",
+      "resource": "https://github.com/pgvector/pgvector",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:hybrid-search-reranking-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "RAG",
+      "skill": "Hybrid search + reranking",
+      "priority": "Advanced",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Keyword/BM25 plus dense retrieval, reciprocal rank fusion, reranking, query rewrite",
+      "practice": "Compare dense-only vs hybrid/reranked retrieval",
+      "resource": "https://www.elastic.co/what-is/hybrid-search",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:rag-evaluation-grounding-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "RAG",
+      "skill": "RAG evaluation + grounding",
+      "priority": "Must-have for production",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Retrieval recall, answer faithfulness, relevance, citation correctness, abstention on missing evidence",
+      "practice": "Build a 20-question benchmark with expected source citations",
+      "resource": "https://docs.ragas.io/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:langchain-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "LLM frameworks",
+      "skill": "LangChain",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Prompt templates, runnable chains, retrievers, tool calling, tracing/evaluation concepts",
+      "practice": "Build a small RAG flow and document each component",
+      "resource": "https://python.langchain.com/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:llamaindex-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "LLM frameworks",
+      "skill": "LlamaIndex",
+      "priority": "Alternative to learn",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Document ingestion, indexes, retrievers, query engines, evaluation",
+      "practice": "Rebuild a small document-QA workflow if relevant to target roles",
+      "resource": "https://docs.llamaindex.ai/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:agent-workflows-tool-use-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Agents",
+      "skill": "Agent workflows + tool use",
+      "priority": "Advanced / role-dependent",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Tool schemas, routing, bounded loops, state, retries, human approval, stopping conditions",
+      "practice": "Build a bounded agent that calls 2 safe tools and logs actions",
+      "resource": "https://platform.openai.com/docs/guides/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:mcp-concepts-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Agents",
+      "skill": "MCP concepts",
+      "priority": "Useful for agent tooling",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Client/server roles, tools/resources/prompts, permissions, trust boundaries",
+      "practice": "Create or connect a simple MCP tool server in a sandbox",
+      "resource": "https://modelcontextprotocol.io/introduction",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:prompt-injection-data-privacy-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "GenAI safety",
+      "skill": "Prompt injection + data privacy",
+      "priority": "Must-have for deployed apps",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Treat retrieved text as untrusted; prevent secrets leakage; validate tool args; least privilege; data retention awareness",
+      "practice": "Add adversarial tests and tool allowlists to the RAG demo",
+      "resource": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:fastapi-model-serving-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deployment + MLOps",
+      "skill": "FastAPI model serving",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Pydantic validation, REST endpoints, async basics, error handling, docs",
+      "practice": "Serve an ML model and test with curl/Postman",
+      "resource": "https://fastapi.tiangolo.com/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:docker-environment-configuration-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deployment + MLOps",
+      "skill": "Docker + environment configuration",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Dockerfile, images, ports, volumes, secrets/env vars, reproducible builds",
+      "practice": "Containerize model API without committing secrets",
+      "resource": "https://docs.docker.com/get-started/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:experiment-tracking-monitoring-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deployment + MLOps",
+      "skill": "Experiment tracking + monitoring",
+      "priority": "Advanced",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Track data/model versions, metrics, latency, drift basics, logs",
+      "practice": "Log model version and prediction latency",
+      "resource": "https://mlflow.org/docs/latest/index.html",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:cloud-deployment-ai-ml",
+     "values": {
+      "track": "AI/ML",
+      "category": "Deployment + MLOps",
+      "skill": "Cloud deployment",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Deploy API, configure env vars, logs, access controls, health checks",
+      "practice": "Deploy one API and write rollback/setup notes",
+      "resource": "https://aws.amazon.com/getting-started/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:react-fundamentals-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Frontend",
+      "skill": "React fundamentals",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Components, props/state, hooks, forms, routing, context, performance basics",
+      "practice": "Build a responsive multi-page app with loading/error states",
+      "resource": "https://react.dev/learn",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:react-native-fundamentals-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Frontend",
+      "skill": "React Native fundamentals",
+      "priority": "Must-have for RN roles",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Components, hooks, navigation, platform differences, permissions, app lifecycle",
+      "practice": "Build an Android app with 3 screens and API integration",
+      "resource": "https://reactnative.dev/docs/getting-started",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:expo-mobile-workflow-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Frontend",
+      "skill": "Expo + mobile workflow",
+      "priority": "Must-have for fast RN delivery",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Expo setup, app config, device testing, builds, environment variables",
+      "practice": "Build and share a test build; document setup",
+      "resource": "https://docs.expo.dev/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:state-management-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Frontend",
+      "skill": "State management",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Context or Redux Toolkit/Zustand, server state, cache invalidation",
+      "practice": "Implement auth/session state and API query state",
+      "resource": "https://redux-toolkit.js.org/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:mobile-ux-offline-push-notifications-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Frontend",
+      "skill": "Mobile UX, offline, push notifications",
+      "priority": "Role-dependent",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Navigation, forms, secure storage, network errors, offline queue basics, push-notification concepts",
+      "practice": "Add offline/error states and test on an actual/emulated device",
+      "resource": "https://docs.expo.dev/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:node-js-express-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Backend",
+      "skill": "Node.js + Express",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Routing, middleware, validation, error handling, auth, async operations",
+      "practice": "Build a REST API with validation and clear error responses",
+      "resource": "https://expressjs.com/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:rest-apis-http-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Backend",
+      "skill": "REST APIs + HTTP",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Methods/status codes, pagination, filtering, versioning, auth, idempotency basics",
+      "practice": "Document endpoints with examples",
+      "resource": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:authentication-security-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Backend",
+      "skill": "Authentication + security",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Sessions/JWT basics, password hashing, authorization, CORS, rate limiting, secret handling",
+      "practice": "Write tests for unauthorized/invalid requests",
+      "resource": "https://owasp.org/www-project-top-ten/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:sql-postgresql-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Database",
+      "skill": "SQL + PostgreSQL",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Joins, constraints, indexes, transactions, normalization, migrations",
+      "practice": "Design schema and query examples",
+      "resource": "https://www.postgresql.org/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:mongodb-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Database",
+      "skill": "MongoDB",
+      "priority": "Must-have for MERN",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Documents, schema design, indexes, aggregation, validation, pagination",
+      "practice": "Design collections and optimize one query",
+      "resource": "https://www.mongodb.com/docs/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:unit-integration-api-testing-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Testing",
+      "skill": "Unit/integration/API testing",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Test happy path, validation failures, auth, database behavior, mocks",
+      "practice": "Add automated tests to one project",
+      "resource": "https://vitest.dev/guide/",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:ci-cd-hosting-full-stack",
+     "values": {
+      "track": "Full Stack",
+      "category": "Deployment",
+      "skill": "CI/CD + hosting",
+      "priority": "Useful",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Build pipeline, env vars, logs, health checks, domains, rollback basics",
+      "practice": "Deploy frontend and backend; add README with setup steps",
+      "resource": "https://docs.github.com/en/actions",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    },
+    {
+     "id": "skills:project-documentation-demo-both",
+     "values": {
+      "track": "Both",
+      "category": "Portfolio",
+      "skill": "Project documentation + demo",
+      "priority": "Must-have",
+      "status": "Not Started",
+      "confidence": 1,
+      "learn": "Problem, users, architecture, trade-offs, limitations, setup, screenshots, demo URL",
+      "practice": "Polish Swasthya Setu and portfolio README; prepare 2-min pitch",
+      "resource": "https://docs.github.com/en/repositories",
+      "approach": "Study basics → implement task → commit proof",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "resources",
+   "title": "Learning resources",
+   "kind": "catalog",
+   "group": "library",
+   "primary": "resource",
+   "secondary": "domain",
+   "groupBy": null,
+   "filters": [
+    "domain"
+   ],
+   "statusSet": "learning",
+   "subtitle": "Documentation and courses behind the roadmaps.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "domain",
+     "label": "Domain",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "resource",
+     "label": "Resource",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "link",
+     "label": "Link",
+     "type": "link",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "useFor",
+     "label": "Use it for",
+     "type": "text",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "resources:official-python-tutorial",
+     "values": {
+      "domain": "Python",
+      "resource": "Official Python Tutorial",
+      "link": "https://docs.python.org/3/tutorial/",
+      "useFor": "Python basics",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:khan-academy-statistics-probability",
+     "values": {
+      "domain": "Math/Stats",
+      "resource": "Khan Academy Statistics & Probability",
+      "link": "https://www.khanacademy.org/math/statistics-probability",
+      "useFor": "Probability, distributions, inference",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:khan-academy-linear-algebra",
+     "values": {
+      "domain": "Linear Algebra",
+      "resource": "Khan Academy Linear Algebra",
+      "link": "https://www.khanacademy.org/math/linear-algebra",
+      "useFor": "Vectors, matrices, embeddings intuition",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:numpy-documentation",
+     "values": {
+      "domain": "Data",
+      "resource": "NumPy documentation",
+      "link": "https://numpy.org/doc/stable/user/",
+      "useFor": "Array operations",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:pandas-documentation",
+     "values": {
+      "domain": "Data",
+      "resource": "pandas documentation",
+      "link": "https://pandas.pydata.org/docs/",
+      "useFor": "Cleaning and EDA",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:scikit-learn-user-guide",
+     "values": {
+      "domain": "ML",
+      "resource": "scikit-learn User Guide",
+      "link": "https://scikit-learn.org/stable/user_guide.html",
+      "useFor": "Classical ML and evaluation",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:pytorch-tutorials",
+     "values": {
+      "domain": "DL",
+      "resource": "PyTorch Tutorials",
+      "link": "https://pytorch.org/tutorials/",
+      "useFor": "Deep learning",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:hugging-face-learn",
+     "values": {
+      "domain": "DL/NLP",
+      "resource": "Hugging Face Learn",
+      "link": "https://huggingface.co/learn",
+      "useFor": "Transformers, NLP, LLM foundations",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:openai-api-documentation",
+     "values": {
+      "domain": "OpenAI",
+      "resource": "OpenAI API documentation",
+      "link": "https://platform.openai.com/docs/",
+      "useFor": "SDK, responses, tools, embeddings, evals",
+      "status": "Not Started",
+      "notes": "Use server-side API keys; do not commit secrets."
+     }
+    },
+    {
+     "id": "resources:langchain-documentation",
+     "values": {
+      "domain": "RAG",
+      "resource": "LangChain documentation",
+      "link": "https://python.langchain.com/docs/",
+      "useFor": "RAG chains and integrations",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:llamaindex-documentation",
+     "values": {
+      "domain": "RAG",
+      "resource": "LlamaIndex documentation",
+      "link": "https://docs.llamaindex.ai/",
+      "useFor": "Document ingestion and retrieval",
+      "status": "Not Started",
+      "notes": "Learn one framework deeply first."
+     }
+    },
+    {
+     "id": "resources:ragas-documentation",
+     "values": {
+      "domain": "RAG evaluation",
+      "resource": "Ragas documentation",
+      "link": "https://docs.ragas.io/",
+      "useFor": "RAG evaluation concepts",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:pgvector",
+     "values": {
+      "domain": "Vector DB",
+      "resource": "pgvector",
+      "link": "https://github.com/pgvector/pgvector",
+      "useFor": "Vector similarity in Postgres",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:model-context-protocol",
+     "values": {
+      "domain": "Agents/MCP",
+      "resource": "Model Context Protocol",
+      "link": "https://modelcontextprotocol.io/introduction",
+      "useFor": "Tools and MCP basics",
+      "status": "Not Started",
+      "notes": "Understand permissions/trust boundaries."
+     }
+    },
+    {
+     "id": "resources:owasp-top-10-for-llm-applications",
+     "values": {
+      "domain": "AI safety",
+      "resource": "OWASP Top 10 for LLM Applications",
+      "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "useFor": "Prompt injection and LLM app risks",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:fastapi-docs",
+     "values": {
+      "domain": "Backend",
+      "resource": "FastAPI docs",
+      "link": "https://fastapi.tiangolo.com/",
+      "useFor": "Serve models and AI APIs",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:react-docs",
+     "values": {
+      "domain": "Frontend",
+      "resource": "React docs",
+      "link": "https://react.dev/learn",
+      "useFor": "React fundamentals",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:react-native-docs",
+     "values": {
+      "domain": "Mobile",
+      "resource": "React Native docs",
+      "link": "https://reactnative.dev/docs/getting-started",
+      "useFor": "React Native fundamentals",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:expo-docs",
+     "values": {
+      "domain": "Mobile",
+      "resource": "Expo docs",
+      "link": "https://docs.expo.dev/",
+      "useFor": "Build and test RN apps",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:express-docs",
+     "values": {
+      "domain": "Backend",
+      "resource": "Express docs",
+      "link": "https://expressjs.com/",
+      "useFor": "Node backend",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:postgresql-docs",
+     "values": {
+      "domain": "Database",
+      "resource": "PostgreSQL docs",
+      "link": "https://www.postgresql.org/docs/",
+      "useFor": "SQL/database fundamentals",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:mongodb-docs",
+     "values": {
+      "domain": "Database",
+      "resource": "MongoDB docs",
+      "link": "https://www.mongodb.com/docs/",
+      "useFor": "MERN database",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:docker-getting-started",
+     "values": {
+      "domain": "DevOps",
+      "resource": "Docker getting started",
+      "link": "https://docs.docker.com/get-started/",
+      "useFor": "Container basics",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:leetcode",
+     "values": {
+      "domain": "Interview",
+      "resource": "LeetCode",
+      "link": "https://leetcode.com/problemset/",
+      "useFor": "DSA practice",
+      "status": "Not Started",
+      "notes": ""
+     }
+    },
+    {
+     "id": "resources:sqlbolt",
+     "values": {
+      "domain": "Interview",
+      "resource": "SQLBolt",
+      "link": "https://sqlbolt.com/",
+      "useFor": "SQL practice",
+      "status": "Not Started",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "projects",
+   "title": "Project ideas",
+   "kind": "catalog",
+   "group": "library",
+   "primary": "item",
+   "secondary": "milestone",
+   "groupBy": "project",
+   "filters": [
+    "milestone"
+   ],
+   "statusSet": "project",
+   "subtitle": "Milestones for portfolio projects, with space for proof links and target dates.",
+   "help": null,
+   "footnotes": [],
+   "columns": [
+    {
+     "key": "project",
+     "label": "Project",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "milestone",
+     "label": "Milestone",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "item",
+     "label": "Checklist item",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "status",
+     "label": "Status",
+     "type": "status",
+     "table": true,
+     "editable": true
+    },
+    {
+     "key": "proof",
+     "label": "Proof / URL",
+     "type": "input",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "nextAction",
+     "label": "Next action",
+     "type": "input",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "targetDate",
+     "label": "Target date",
+     "type": "date",
+     "table": false,
+     "editable": true
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "note",
+     "table": false,
+     "editable": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "projects:rag-document-assistant-upload-pdfs-text-parse-documents-chunk-with-sou",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "MVP",
+      "item": "Upload PDFs/text, parse documents, chunk with source metadata",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Build ingestion pipeline",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-generate-embeddings-and-persist-in-a-vector-sto",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "MVP",
+      "item": "Generate embeddings and persist in a vector store",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Choose pgvector or Chroma",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-retrieve-top-k-relevant-chunks-and-generate-ans",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "MVP",
+      "item": "Retrieve top-k relevant chunks and generate answer with citations",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add source citations and abstain if no evidence",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-create-20-30-questions-with-expected-answers-so",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "Evaluation",
+      "item": "Create 20–30 questions with expected answers/source chunks",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Build evaluation dataset",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-measure-retrieval-quality-groundedness-citation",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "Evaluation",
+      "item": "Measure retrieval quality, groundedness, citation correctness, latency and cost",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Compare baseline and improved retrieval",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-add-fastapi-backend-validation-logging-rate-lim",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "Production basics",
+      "item": "Add FastAPI backend, validation, logging, rate limits and safe secrets",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add API tests and env vars",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:rag-document-assistant-dockerize-and-deploy-write-setup-limitations-in",
+     "values": {
+      "project": "RAG Document Assistant",
+      "milestone": "Deployment",
+      "item": "Dockerize and deploy; write setup/limitations in README",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add demo and architecture diagram",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:full-stack-ai-app-react-typescript-ui-with-loading-error-empty-and-ret",
+     "values": {
+      "project": "Full Stack AI App",
+      "milestone": "Frontend",
+      "item": "React/TypeScript UI with loading, error, empty and retry states",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Polish responsive UI",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:full-stack-ai-app-node-express-or-fastapi-apis-auth-validation-databas",
+     "values": {
+      "project": "Full Stack AI App",
+      "milestone": "Backend",
+      "item": "Node/Express or FastAPI APIs, auth, validation, database integration",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Document API routes",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:full-stack-ai-app-server-side-openai-api-call-streaming-structured-out",
+     "values": {
+      "project": "Full Stack AI App",
+      "milestone": "OpenAI integration",
+      "item": "Server-side OpenAI API call, streaming, structured outputs or tool calling",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Keep API key on server only",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:full-stack-ai-app-unit-api-tests-and-a-small-llm-evaluation-set",
+     "values": {
+      "project": "Full Stack AI App",
+      "milestone": "Testing",
+      "item": "Unit/API tests and a small LLM evaluation set",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Test invalid inputs and failure modes",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:react-native-ai-app-react-native-expo-app-with-navigation-and-api-inte",
+     "values": {
+      "project": "React Native AI App",
+      "milestone": "Mobile MVP",
+      "item": "React Native/Expo app with navigation and API integration",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Build 3–4 screens",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:react-native-ai-app-loading-error-offline-states-secure-token-storage-",
+     "values": {
+      "project": "React Native AI App",
+      "milestone": "Mobile reliability",
+      "item": "Loading/error/offline states, secure token storage, permissions where needed",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Test on Android emulator/device",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:react-native-ai-app-build-instructions-screenshots-demo-video-privacy-",
+     "values": {
+      "project": "React Native AI App",
+      "milestone": "Delivery",
+      "item": "Build instructions, screenshots, demo video, privacy note and README",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Publish repo and demo assets",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:swasthya-setu-document-architecture-api-endpoints-roles-demo-data-and-",
+     "values": {
+      "project": "Swasthya Setu",
+      "milestone": "Portfolio polish",
+      "item": "Document architecture, API endpoints, roles, demo data and known limitations",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Update README and screenshots",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:swasthya-setu-explain-ml-microservice-predictions-input-output-evaluat",
+     "values": {
+      "project": "Swasthya Setu",
+      "milestone": "AI integration",
+      "item": "Explain ML microservice predictions, input/output, evaluation and limitations",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add model evaluation details if available",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:ai-swe-integrated-product-connect-a-python-ml-rag-service-to-a-tested-",
+     "values": {
+      "project": "AI + SWE Integrated Product",
+      "milestone": "Integration",
+      "item": "Connect a Python ML/RAG service to a tested backend API and React UI",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Document API contract, model evaluation, safety, latency/cost and deployment",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:ai-swe-integrated-product-test-api-validation-authentication-model-fai",
+     "values": {
+      "project": "AI + SWE Integrated Product",
+      "milestone": "Testing",
+      "item": "Test API validation, authentication, model failures, grounding and end-to-end user flow",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add automated tests and a short evaluation report",
+      "targetDate": "",
+      "notes": ""
+     }
+    },
+    {
+     "id": "projects:ai-swe-integrated-product-deploy-frontend-backend-and-ai-service-with-",
+     "values": {
+      "project": "AI + SWE Integrated Product",
+      "milestone": "Deployment",
+      "item": "Deploy frontend, backend and AI service with environment variables and health checks",
+      "status": "Not started",
+      "proof": "",
+      "nextAction": "Add architecture diagram, demo URL and reproducible setup steps",
+      "targetDate": "",
+      "notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "key": "sources",
+   "title": "Sources & notes",
+   "kind": "reference",
+   "group": "library",
+   "primary": "source",
+   "secondary": null,
+   "groupBy": null,
+   "filters": [],
+   "statusSet": null,
+   "subtitle": "Where the company and interview information came from. Processes change, so verify the current listing.",
+   "help": null,
+   "footnotes": [
+    {
+     "label": "Important interpretation note",
+     "text": "Interview rounds in the company tracker are typical patterns or publicly described processes, not guarantees. Job descriptions and hiring programs change; verify the current listing before preparing for a specific sequence."
+    },
+    {
+     "label": "Degree note",
+     "text": "Because you are pursuing BCA, confirm degree, graduation-year, marks, backlog and experience requirements on every job listing. Some dedicated AI/ML roles specify B.Tech/M.Tech or postgraduate qualifications."
+    },
+    {
+     "label": "Search keywords",
+     "text": "AI/ML Engineer Intern; Machine Learning Intern; AI Engineer Trainee; GenAI Engineer Intern; Full Stack Developer Intern; React Native Developer; Mobile App Developer; Software Engineer Intern; Graduate Software Engineer"
+    }
+   ],
+   "columns": [
+    {
+     "key": "source",
+     "label": "Source / company",
+     "type": "text",
+     "table": false,
+     "editable": false
+    },
+    {
+     "key": "supports",
+     "label": "What it supports",
+     "type": "text",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "link",
+     "label": "Link",
+     "type": "link",
+     "table": true,
+     "editable": false
+    },
+    {
+     "key": "notes",
+     "label": "Notes",
+     "type": "text",
+     "table": true,
+     "editable": false
+    }
+   ],
+   "rows": [
+    {
+     "id": "sources:ai-ml-companion-fresher-playbook-2026",
+     "values": {
+      "source": "AI-ML Companion — fresher playbook 2026",
+      "supports": "General fresher interview-stage patterns and AI engineering preparation",
+      "link": "https://aimlcompanion.ai/blog/ai-engineering-fresher-placements-india-2026",
+      "notes": "Third-party overview; company processes still vary by job."
+     }
+    },
+    {
+     "id": "sources:face-prep-ai-ml-interview-questions-2026",
+     "values": {
+      "source": "FACE Prep — AI/ML interview questions 2026",
+      "supports": "Common AI/ML foundations and role-specific assessment topics",
+      "link": "https://faceprep.in/article/top-30-ai-ml-interview-questions-for-freshers-2026/",
+      "notes": "Use as a study guide, not a guarantee of exact questions."
+     }
+    },
+    {
+     "id": "sources:hcltech-ai-ml-fresher-listing",
+     "values": {
+      "source": "HCLTech AI/ML fresher listing",
+      "supports": "Example of AI/ML fresher responsibilities and degree-specific eligibility",
+      "link": "https://careers.hcltech.com/job/Campus-Advanced-Beginner/162110-en_US",
+      "notes": "A listed role may require B.Tech; verify BCA eligibility."
+     }
+    },
+    {
+     "id": "sources:gnosify-careers",
+     "values": {
+      "source": "Gnosify Careers",
+      "supports": "Published AI/ML, full-stack, React Native role families and hiring process",
+      "link": "https://www.gnosify.in/careers",
+      "notes": "Confirm active opening before applying."
+     }
+    },
+    {
+     "id": "sources:radialbrain-careers",
+     "values": {
+      "source": "RadialBrain Careers",
+      "supports": "Published AI engineering internship / AI + full-stack trainee and process",
+      "link": "https://www.radialbrain.com/careers/",
+      "notes": "Confirm active opening before applying."
+     }
+    },
+    {
+     "id": "sources:vatsal-technosoft-react-react-native-fresher-listing",
+     "values": {
+      "source": "Vatsal Technosoft React + React Native fresher listing",
+      "supports": "Example React Native fresher skills and role scope",
+      "link": "https://www.recruit.vatsaltechnosoft.com/jobs/react-react-native-freshers",
+      "notes": "Verify current availability and employment terms."
+     }
+    },
+    {
+     "id": "sources:origin-softwares-careers",
+     "values": {
+      "source": "Origin Softwares Careers",
+      "supports": "Published hiring steps for full-stack/AI-first work",
+      "link": "https://www.originsoftwares.com/careers",
+      "notes": "Confirm active opening and role level."
+     }
+    },
+    {
+     "id": "sources:stayboba-college-hiring-listing",
+     "values": {
+      "source": "StayBoba college-hiring listing",
+      "supports": "Example project-based full-stack college hiring process",
+      "link": "https://careers.stayboba.com/apply/full-stack-college/",
+      "notes": "Review assignment time commitment and terms."
+     }
+    },
+    {
+     "id": "sources:tcs-careers-india",
+     "values": {
+      "source": "TCS Careers India",
+      "supports": "Official hiring and graduate pathways",
+      "link": "https://www.tcs.com/careers/india",
+      "notes": "Eligibility differs by hiring track."
+     }
+    },
+    {
+     "id": "sources:infosys-careers",
+     "values": {
+      "source": "Infosys Careers",
+      "supports": "Official careers / graduate pathways",
+      "link": "https://www.infosys.com/careers/",
+      "notes": "Check exact role requirements."
+     }
+    },
+    {
+     "id": "sources:microsoft-careers",
+     "values": {
+      "source": "Microsoft Careers",
+      "supports": "Official jobs portal",
+      "link": "https://careers.microsoft.com/",
+      "notes": "Search India, internship, graduate, AI and mobile roles."
+     }
+    },
+    {
+     "id": "sources:amazon-jobs",
+     "values": {
+      "source": "Amazon Jobs",
+      "supports": "Official jobs portal",
+      "link": "https://www.amazon.jobs/",
+      "notes": "Search India and filter internship/entry-level."
+     }
+    },
+    {
+     "id": "sources:zoho-careers",
+     "values": {
+      "source": "Zoho Careers",
+      "supports": "Official jobs portal",
+      "link": "https://www.zoho.com/careers.html",
+      "notes": "Search software developer and AI-related openings."
+     }
+    },
+    {
+     "id": "sources:browserstack-careers",
+     "values": {
+      "source": "BrowserStack Careers",
+      "supports": "Official jobs portal",
+      "link": "https://www.browserstack.com/careers/",
+      "notes": "Search early-career and frontend/full-stack roles."
+     }
+    }
+   ]
+  }
+ ]
+}
