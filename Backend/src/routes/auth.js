@@ -138,5 +138,11 @@ router.get('/me', (req, res) => {
   const user = currentUser(req);
   res.json({ user: user ? publicUser(user) : null });
 });
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "OK",
+    message: "Skill Trail API is running"
+  });
+});
 
 export default router;
