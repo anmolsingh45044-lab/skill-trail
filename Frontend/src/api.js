@@ -1,6 +1,6 @@
 // Same-origin by default (Vite proxies /api in development, the backend serves the site in production).
 // Set VITE_API_URL only if you host the API on a different origin.
-const BASE = import.meta.env.VITE_API_URL ?? '';
+const BASE = '';
 
 export class ApiError extends Error {
   constructor(message, status) {
