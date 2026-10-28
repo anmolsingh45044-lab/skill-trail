@@ -11,7 +11,7 @@ export const db = new Database(config.databasePath);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');
 
-db.exec(`
+db.exec(
   CREATE TABLE IF NOT EXISTS users (
     id            INTEGER PRIMARY KEY AUTOINCREMENT,
     email         TEXT NOT NULL UNIQUE COLLATE NOCASE,
@@ -32,4 +32,4 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now')),
     PRIMARY KEY (user_id, item_id, field)
   );
-`);
+);
