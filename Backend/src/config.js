@@ -26,7 +26,9 @@ export const config = {
   jwtSecret,
   sessionDays: 7,
   googleClientId: env.GOOGLE_CLIENT_ID?.trim() || '',
-  databasePath: env.DATABASE_PATH || path.join(backendRoot, 'data', 'tracker.db'),
+  databaseUrl: env.DATABASE_URL?.trim() || '',
+  // Neon requires TLS. DATABASE_SSL=false is available for a local PostgreSQL instance.
+  databaseSsl: env.DATABASE_SSL !== 'false',
   // Number of reverse proxies in front of the app (e.g. 1 on Render/Railway/Heroku). Needed for correct rate limiting.
   trustProxy: env.TRUST_PROXY ? Number(env.TRUST_PROXY) || 1 : false,
   cookieSecure: env.COOKIE_SECURE ? env.COOKIE_SECURE === 'true' : isProduction,

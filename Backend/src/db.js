@@ -1,35 +1,57 @@
-import Database from 'better-sqlite3';
-import fs from 'node:fs';
-import path from 'node:path';
+import pg from 'pg';
 import { config } from './config.js';
 
-if (config.databasePath !== ':memory:') {
-  fs.mkdirSync(path.dirname(config.databasePath), { recursive: true });
+const { Pool } = pg;
+
+if (!config.databaseUrl) {
+  throw new Error('DATABASE_URL must be set for the PostgreSQL backend.');
 }
 
-export const db = new Database(config.databasePath);
-db.pragma('journal_mode = WAL');
-db.pragma('foreign_keys = ON');
+export const pool = new Pool({
+  connectionString: config.databaseUrl,
+  ssl: config.databaseSsl ? { rejectUnauthorized: false } : false,
+});
 
-db.exec(
-  CREATE TABLE IF NOT EXISTS users (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    email         TEXT NOT NULL UNIQUE COLLATE NOCASE,
-    name          TEXT NOT NULL,
-    picture       TEXT,
-    password_hash TEXT,
-    google_id     TEXT UNIQUE,
-    created_at    TEXT NOT NULL DEFAULT (datetime('now')),
-    last_login_at TEXT
-  );
+export const query = (text, values) => pool.query(text, values);
 
-  -- Only the values a user has changed are stored. Everything else falls back to the catalog defaults.
-  CREATE TABLE IF NOT EXISTS user_progress (
-    user_id    INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    item_id    TEXT NOT NULL,
-    field      TEXT NOT NULL,
-    value      TEXT NOT NULL,
-    updated_at TEXT NOT NULL DEFAULT (datetime('now')),
-    PRIMARY KEY (user_id, item_id, field)
-  );
-);
+export async function withTransaction(work) {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    const result = await work(client);
+    await client.query('COMMIT');
+    return result;
+  } catch (error) {
+    await client.query('ROLLBACK');
+    throw error;
+  } finally {
+    client.release();
+  }
+}
+
+// Idempotent initialization: CREATE TABLE IF NOT EXISTS never removes existing records.
+export async function initializeDatabase() {
+  await query(`
+    CREATE TABLE IF NOT EXISTS users (
+      id            BIGSERIAL PRIMARY KEY,
+      email         TEXT NOT NULL,
+      name          TEXT NOT NULL,
+      picture       TEXT,
+      password_hash TEXT,
+      google_id     TEXT UNIQUE,
+      created_at    TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      last_login_at TIMESTAMPTZ
+    );
+
+    CREATE UNIQUE INDEX IF NOT EXISTS users_email_lower_idx ON users (LOWER(email));
+
+    CREATE TABLE IF NOT EXISTS user_progress (
+      user_id    BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      item_id    TEXT NOT NULL,
+      field      TEXT NOT NULL,
+      value      TEXT NOT NULL,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (user_id, item_id, field)
+    );
+  `);
+}

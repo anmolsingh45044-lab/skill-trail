@@ -1,21 +1,22 @@
-import { db } from '../db.js';
+import { query, withTransaction } from '../db.js';
 import { config } from '../config.js';
 import { catalog, findItem, editableColumns } from '../catalog.js';
 import { badRequest, notFound } from '../errors.js';
 
-const selectProgress = db.prepare('SELECT item_id, field, value FROM user_progress WHERE user_id = ?');
-const upsertProgress = db.prepare(`
+const selectProgress = 'SELECT item_id, field, value FROM user_progress WHERE user_id = $1';
+const upsertProgress = `
   INSERT INTO user_progress (user_id, item_id, field, value, updated_at)
-  VALUES (@userId, @itemId, @field, @value, datetime('now'))
+  VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP)
   ON CONFLICT (user_id, item_id, field)
-  DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at
-`);
+  DO UPDATE SET value = EXCLUDED.value, updated_at = EXCLUDED.updated_at
+`;
 
 // ------------------------------------------------------------------ merging
 
-function loadOverrides(userId) {
+async function loadOverrides(userId) {
   const byItem = new Map();
-  for (const { item_id, field, value } of selectProgress.all(userId)) {
+  const { rows } = await query(selectProgress, [userId]);
+  for (const { item_id, field, value } of rows) {
     if (!byItem.has(item_id)) byItem.set(item_id, {});
     byItem.get(item_id)[field] = value;
   }
@@ -41,8 +42,8 @@ function mergedValues(sheet, row, overrides = {}) {
   return values;
 }
 
-export function getTrackerForUser(userId) {
-  const overrides = loadOverrides(userId);
+export async function getTrackerForUser(userId) {
+  const overrides = await loadOverrides(userId);
   return {
     statusSets: catalog.statusSets,
     sheets: catalog.sheets.map((sheet) => {
@@ -88,7 +89,7 @@ function validate(col, sheet, value) {
   }
 }
 
-export function updateItem(userId, itemId, changes) {
+export async function updateItem(userId, itemId, changes) {
   const found = findItem(itemId);
   if (!found) throw notFound('That item no longer exists.');
   if (!changes || typeof changes !== 'object' || Array.isArray(changes) || Object.keys(changes).length === 0) {
@@ -102,9 +103,11 @@ export function updateItem(userId, itemId, changes) {
     return { userId, itemId, field, value: validate(col, found.sheet, raw) };
   });
 
-  db.transaction(() => rows.forEach((r) => upsertProgress.run(r)))();
+  await withTransaction(async (client) => {
+    for (const r of rows) await client.query(upsertProgress, [r.userId, r.itemId, r.field, r.value]);
+  });
 
-  const overrides = loadOverrides(userId).get(itemId);
+  const overrides = (await loadOverrides(userId)).get(itemId);
   return mergedValues(found.sheet, found.row, overrides);
 }
 
@@ -118,8 +121,8 @@ function countBy(values, options) {
   return counts;
 }
 
-export function getDashboard(userId) {
-  const { sheets } = getTrackerForUser(userId);
+export async function getDashboard(userId) {
+  const { sheets } = await getTrackerForUser(userId);
   const sets = catalog.statusSets;
   const learning = sets.learning;
 
